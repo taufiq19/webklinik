@@ -186,13 +186,20 @@
                         </div>
                         <div class="card-body">
                             <form>
-                                <div class="mb-3">
-                                    <label for="namagambar" class="form-label">Jenis Spesialis</label>
-                                    <input type="" class="form-control" id="" aria-describedby="">
+                                <div class="form-group">
+                                    <label for="status" class="form-label">Jenis Spesialis</label>
+                                    <select name="status" id="status" class="form-control ">
+                                        <option style="background-color: lavender;" value="N">-- PILIH JENIS SPESIALIS --</option>
+                                        <option value="PENYAKIT DALAM">PENYAKIT DALAM</option>
+                                        <option value="BEDAH">BEDAH</option>
+                                        <option value="ANAK">ANAK</option>
+                                        <option value="KANDUNGAN">KANDUNGAN</option>
+                                    </select>
                                 </div>
+                                <br>
                                 <div class="mb-3">
                                     <label for="namagambar" class="form-label">Judul Artikel</label>
-                                    <input type="" class="form-control" id="" aria-describedby="">
+                                    <input type="" class="form-control" id="" >
                                 </div>
                                 <div class="form-floating mb-3">
                                     <div id="toolbar-container"></div>
@@ -209,6 +216,16 @@
                                     <label for="ketgambar" class="form-label">Tag</label>
                                     <input type="" class="form-control" id="" aria-describedby="">
                                 </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="kategori" class="form-label">Jadikan Sebagai Berita Utama?</label>
+                                    <select name="kategori" id="kategori" class="form-control ">
+                                        <option value="N">-- Pilih --</option>
+                                        <option value="Y">Ya</option>
+                                        <option value="N">Tidak</option>
+                                    </select>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                                 <button type="submit" class="btn btn-primary">Batal</button>
                             </form>
