@@ -1,3 +1,14 @@
+<?php
+include "koneksi/konek.php";
+session_start();
+
+if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
+    //echo " <script>location:='proses/login.php'</script>";
+    header('location:login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,10 +19,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>KLINIK SITTI KHADIJAH | ADMIN</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../image/LOGO ST KHADIJAH.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../image/LOGO ST KHADIJAH.png" />
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="../css/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -40,7 +51,7 @@
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -54,7 +65,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Dashboard</div>
-                        <a class="nav-link" href="../index.html">
+                        <a class="nav-link" href="index.php">
                             <div class="sb-nav-link-icon"><i class="bi bi-house"></i></div>
                             Home
                         </a>
@@ -67,8 +78,10 @@
                         </a>
                         <div class="collapse" id="collapsesatu" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../UI/galeri.php">Galeri</a>
-                                <a class="nav-link" href="../UI/artikel.php">Artikel</a>
+                                <a class="nav-link" href="index.php?halaman=galeri">Galeri</a>
+                                <a class="nav-link" href="index.php?halaman=artikel">Artikel</a>
+                                <!-- <a class="nav-link" href="UI/galeri.php">Galeri</a>
+                                <a class="nav-link" href="UI/artikel.php">Artikel</a> -->
                             </nav>
                         </div>
 
@@ -81,7 +94,7 @@
                         </a>
                         <div class="collapse" id="collapsedua" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../UI/fasilitas.php">Fasilitas Klinik</a>
+                                <a class="nav-link" href="index.php?halaman=fasilitas">Fasilitas Klinik</a>
                             </nav>
                         </div>
 
@@ -94,8 +107,8 @@
                         </a>
                         <div class="collapse" id="collapsetiga" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../UI/dokter.php">Daftar Dokter</a>
-                                <a class="nav-link" href="../UI/Jadwaldokter.php">Jadwal Dokter</a>
+                                <a class="nav-link" href="index.php?halaman=dokter">Daftar Dokter</a>
+                                <a class="nav-link" href="index.php?halaman=jadwaldokter">Jadwal Dokter</a>
                             </nav>
                         </div>
 
@@ -108,9 +121,9 @@
                         </a>
                         <div class="collapse" id="collapseempat" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../UI/lab.php">Laboratorium</a>
-                                <a class="nav-link" href="../UI/mcu.php">MCU</a>
-                                <a class="nav-link" href="../UI/alurpelayanan.php">Alur Pelayanan</a>
+                                <a class="nav-link" href="index.php?halaman=lab">Laboratorium</a>
+                                <a class="nav-link" href="index.php?halaman=mcu">MCU</a>
+                                <a class="nav-link" href="index.php?halaman=alurpelayanan">Alur Pelayanan</a>
                             </nav>
                         </div>
 
@@ -123,8 +136,8 @@
                         </a>
                         <div class="collapse" id="collapselima" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../UI/produkapotik.php">Tambah Produk</a>
-                                <a class="nav-link" href="../UI/deskripsiproduk.php">Deskripsi Produk</a>
+                                <a class="nav-link" href="index.php?halaman=produk">Tambah Produk</a>
+                                <a class="nav-link" href="index.php?halaman=deskripsiproduk">Deskripsi Produk</a>
                             </nav>
                         </div>
 
@@ -137,29 +150,29 @@
                         </a>
                         <div class="collapse" id="collapseenam" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../UI/sejarah.php">Sejarah</a>
-                                <a class="nav-link" href="../UI/komitmentujuan.php">Komitmen & Tujuan</a>
-                                <a class="nav-link" href="../UI/visimisi.php">Visi & Misi</a>
+                                <a class="nav-link" href="index.php?halaman=sejarah">Sejarah</a>
+                                <a class="nav-link" href="index.php?halaman=komitmen">Komitmen & Tujuan</a>
+                                <a class="nav-link" href="index.php?halaman=visimisi">Visi & Misi</a>
                             </nav>
                         </div>
 
                         <hr class="mx-3 my-0">
 
-                        <a class="nav-link" href="../UI/q&a.php">
+                        <a class="nav-link" href="index.php?halaman=qna">
                             <div class="sb-nav-link-icon"><i class="bi bi-question-circle"></i></div>
                             Q & A
                         </a>
 
                         <hr class="mx-3 my-0">
 
-                        <a class="nav-link" href="../UI/kritiksaran.php">
+                        <a class="nav-link" href="index.php?halaman=kritik">
                             <div class="sb-nav-link-icon"><i class="bi bi-chat-fill"></i></div>
                             Kritik & Saran
                         </a>
 
                         <hr class="mx-3 my-0">
 
-                        <a class="nav-link" href="../UI/kontak.php">
+                        <a class="nav-link" href="index.php?halaman=kontak">
                             <div class="sb-nav-link-icon"><i class="bi bi-telephone"></i></div>
                             Kontak
                         </a>
@@ -168,67 +181,3 @@
             </nav>
         </div>
         <!-- Akhir Header -->
-
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <h1 class="mt-4">User Interface</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Q & A</li>
-                    </ol>
-
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <a href="../Proses/tambahq&a.php"><button type="button" class="btn btn-primary btn-lg mb-4"><i class="bi bi-plus-circle"></i> Tambah Data</button></a>
-                    </h2>
-
-                    <div class="card shadow-sm mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Daftar Pertanyaan
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Pertanyaan</th>
-                                        <th>Jawaban</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Dimanakah Lokasi Klinik Sitti Khadijah?</td>
-                                        <td>Jl. Pettana Rajeng No.5 Kota Parepare Sulawesi Selatan</td>
-                                        <td>
-                                            <button class="btn btn-warning" type="submit"><i class="bi bi-pencil-square"></i></button>
-                                            <button class="btn btn-danger" type="submit"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <footer class=" py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-center small">
-                        <div class="text-muted">Copyright &copy; <i class="fa fa-heartbeat" style="color: orange"></i>
-                            KU-ST KHADIJAH</div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="../js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="../assets/demo/chart-area-demo.js"></script>
-    <script src="../assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="../js/datatables-simple-demo.js"></script>
-</body>
-
-</html>

@@ -1,3 +1,14 @@
+<?php
+
+include "koneksi/konek.php";
+session_start();
+if (isset($_SESSION['admin'])) {
+    echo " <script>location:='index.php'</script>";
+    header('location:index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,44 +38,47 @@
                             <h2 class="text-uppercase">halaman login admin</h2>
                         </div>
                         <div class="col-md-9 col-lg-6 col-xl-5">
-                            <img src="gambar/LOGO ST KHADIJAH.png" class="img-fluid" style="width: 300px;"
-                                alt="Logo Klinik">
+                            <img src="gambar/LOGO ST KHADIJAH.png" class="img-fluid" style="width: 300px;" alt="Logo Klinik">
                         </div>
                         <div class="col-md-8 col-lg-6 col-xl-4">
-                            <form>
+                            <form method="POST">
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form3Example3" class="form-control form-control-lg"
-                                        placeholder="Masukkan Username" />
+                                    <input type="text" id="form3Example3" class="form-control form-control-lg" name="username" placeholder="Masukkan Username" />
                                     <label class="form-label" for="form3Example3">Username</label>
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-3">
-                                    <input type="password" id="form3Example4" class="form-control form-control-lg"
-                                        placeholder="Masukkan password" />
+                                    <input type="password" id="form3Example4" class="form-control form-control-lg" name="password" placeholder="Masukkan password" />
                                     <label class="form-label" for="form3Example4">Password</label>
                                 </div>
 
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <!-- Checkbox -->
-                                    <div class="form-check mb-0">
-                                        <input class="form-check-input me-2" type="checkbox" value=""
-                                            id="form2Example3" />
-                                        <label class="form-check-label" for="form2Example3">
-                                            Remember me
-                                        </label>
-                                    </div>
-                                </div>
 
-                                <div class="text-center text-lg-start mt-4 pt-2">
-                                    <button type="button" class="btn btn-primary btn-lg"
-                                        style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-                                    <p class="small fw-bold mt-2 pt-1 mb-0">Belum Punya Akun? <a href="register.html"
-                                            class="link-primary">Daftar</a></p>
+
+                                <div class="text-center text-lg-start mb-3 mt-4 pt-2">
+                                    <button class="btn btn-primary btn-lg" name="login" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                                    <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Belum Punya Akun? <a href="register.html" class="link-primary">Daftar</a></p> -->
                                 </div>
+                                <!-- <button class="btn btn-ok btn-user btn-info btn-block mb-3" name="login">Login</button> -->
 
                             </form>
+
+                            <?php
+                            if (isset($_POST['login'])) {
+                                $ambil = $host->query("SELECT * from admin where username = '$_POST[username]' AND password='$_POST[password]'");
+                                $sukses = $ambil->num_rows;
+                                if ($sukses == 1) {
+                                    $_SESSION['admin'] = $ambil->fetch_assoc();
+
+                                    echo "<div class='alert alert-success'>Login Sukses</div>";
+                                    echo "<meta http-equiv='refresh' content='1;url=index.php'>";
+                                } else {
+                                    echo "<div class='alert alert-danger'>Login Gagal</div>";
+                                    echo "<meta http-equiv='refresh' content='1;url='>";
+                                }
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -82,8 +96,7 @@
         </div>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 
 </html>
