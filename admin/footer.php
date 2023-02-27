@@ -16,6 +16,39 @@
 <script src="assets/demo/chart-bar-demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="js/datatables-simple-demo.js"></script>
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#prev').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        $('#gambar').change(function() {
+            readURL(this);
+        });
+
+    });
+</script>
+<script>
+    CKEDITOR.replace('ckedtor', {
+        filebrowserUploadUrl: "upload.php",
+        height: 300,
+        filebrowserUploadMethod: "form"
+    });
+</script>
+</body>
+
+</html>
+
 </body>
 
 </html>
