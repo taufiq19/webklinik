@@ -19,12 +19,11 @@ $d = mysqli_fetch_assoc($data);
                 </h4>
                 <h1 class="fw-bold text-capitalize mb-2" data-aos="fade-right" data-aos-delay="300" data-aos-duration="500">
                     <?php
-                    echo $d['jenis_spesialis'];
+                    echo $d['judul_artikel'];
                     ?>
                 </h1>
 
-                <img src="image/edukasi/edukasi.jpg" class="crd-img-artikel-lanjutan img-fluid mb-1" alt="Gambar-Artikel" data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
-
+                <img src="gambar-artikel/<?php echo $d['gambar']; ?>" class="crd-img-artikel-lanjutan img-fluid mb-1" alt="Gambar-Artikel" data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
 
                 <p class="txt-artikel-lanjutan lh-base isi-artikel mb-5">
                     <?php
@@ -33,45 +32,40 @@ $d = mysqli_fetch_assoc($data);
                 </p>
 
                 <hr style="color: #bfbfbf;">
-                <h6 class="sumber-art text-capitalize fw-light fst-italic mb-5" data-aos="fade-right" data-aos-delay="400" data-aos-duration="500">Sumber</h6>
+                <h6 class="sumber-art  fw-light fst-italic mb-5" data-aos="fade-right" data-aos-delay="400" data-aos-duration="500">
+                    post by
+                    <b class="text-capitalize fw-bold">
+                        <?php
+                        echo $d['nama'];
+                        ?>
+                    </b>
+                </h6>
             </div>
 
             <div class="kolom-artikel col-lg-4 col-12 col-md-4">
                 <hr>
                 <h4 class="text-capitalize fw-bold">baca artikel lainnya</h4>
                 <hr class="mb-4">
+                <?php
+                $no = 1;
+                $ambil_data2 = $host->query("select * from berita join admin on berita.id_admin = admin.id_admin ORDER BY tanggal DESC LIMIT 3 "); ?>
+                <?php while ($data2 = $ambil_data2->fetch_assoc()) {
 
-                <div class="card-artikel p-2" data-aos="fade-left">
-                    <img src="../image/artikel/artikel1.jpg" class="crd-img-artikel mb-3" alt="">
-                    <a class="judul-artikel text-decoration-none" href="">
-                        <h3 class="fw-bold text-capitalize mb-1 text-start">judul artikel</h3>
-                    </a>
-                    <p class="lh-base mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A reiciendis
-                        non iste
-                        suscipit, vel quam id obcaecati nulla aut? Autem impedit deleniti earum molestiae libero!
-                    </p>
-                </div>
-                <div class="card-artikel p-2">
-                    <img src="../image/artikel/artikel1.jpg" class="crd-img-artikel mb-3" alt="">
-                    <a class="judul-artikel text-decoration-none" href="">
-                        <h3 class="fw-bold text-capitalize mb-1 text-start">judul artikel</h3>
-                    </a>
-                    <p class="lh-base mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A reiciendis
-                        non iste
-                        suscipit, vel quam id obcaecati nulla aut? Autem impedit deleniti earum molestiae libero!
-                    </p>
-                </div>
-                <div class="card-artikel p-2">
-                    <img src="../image/artikel/artikel1.jpg" class="crd-img-artikel mb-3" alt="">
-                    <a class="judul-artikel text-decoration-none" href="">
-                        <h3 class="fw-bold text-capitalize mb-1 text-start">judul artikel</h3>
-                    </a>
-                    <p class="lh-base mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A reiciendis
-                        non iste
-                        suscipit, vel quam id obcaecati nulla aut? Autem impedit deleniti earum molestiae libero!
-                    </p>
-                </div>
+                ?>
 
+                    <div class="card-artikel p-2" data-aos="fade-left">
+                        <img src="gambar-artikel/<?php echo $data2['gambar'];  ?>" class="crd-img-artikel mb-3" alt="">
+                        <a class="judul-artikel text-decoration-none" href="">
+                            <h3 class="fw-bold text-capitalize mb-1 text-start">judul artikel</h3>
+                        </a>
+                        <p class="lh-base mb-2">
+                            <?php
+                            echo (str_word_count($data2['isiberita']) > 200 ? substr($data2['isiberita'], 0, 250) . " [...] " : $data2['isiberita']);
+                            ?>
+                        </p>
+                    </div>
+
+                <?php } ?>
 
             </div>
         </div>

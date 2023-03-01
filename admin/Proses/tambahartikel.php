@@ -75,7 +75,7 @@ $id_admin = $_SESSION['admin']['id_admin'];
                                 ' - ' . mysqli_error($host));
                         } else {
                             echo "<div class='alert alert-success text-center'>Berhasil Disimpan</div>";
-                            echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=berita'>";
+                            echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=artikel'>";
                         }
                     }
                     ?>

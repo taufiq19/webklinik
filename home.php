@@ -14,12 +14,17 @@
           <p class="txt-dua fw-bold">Web Sistem Informasi Klinik Utama Sitti Khadijah Kota Parepare</p>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="image/banner/banner1.jpg" class="d-block w-100 img-fluid" alt="Banner Klinik">
-      </div>
-      <div class="carousel-item">
-        <img src="image/banner/banner2.jpg" class="d-block w-100 img-fluid" alt="Banner Klinik">
-      </div>
+      <?php $ambil_data_utama = $host->query("select * from berita join admin on berita.id_admin = admin.id_admin WHERE status='Y' ORDER BY tanggal DESC LIMIT 2"); ?>
+      <?php while ($data_utama = $ambil_data_utama->fetch_assoc()) {
+      ?>
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="gambar-artikel/<?php echo $data_utama['gambar'] ?>" class="d-block w-100 img-fluid" alt="Banner Klinik">
+          <div class="carousel-caption cc-index">
+            <h3 class="txt-satu fw-bold"><?php echo $data_utama['judul_artikel'] ?></h3>
+            <p class="txt-dua fw-bold">Web Sistem Informasi Klinik Utama Sitti Khadijah Kota Parepare</p>
+          </div>
+        </div>
+      <?php } ?>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -205,13 +210,13 @@
         </div>
       </div>
       <?php
-      $ambil_data = $host->query("select * from berita join admin on berita.id_admin = admin.id_admin"); ?>
+      $ambil_data = $host->query("select * from berita join admin on berita.id_admin = admin.id_admin ORDER BY tanggal DESC LIMIT 6"); ?>
       <?php while ($data = $ambil_data->fetch_assoc()) {
 
       ?>
         <div class="col-lg-4 col-md-5 col-11">
           <div class="card-artikel">
-            <img src="image/artikel/artikel1.jpg" class="crd-img-artikel mb-3" alt="Gambar Artikel">
+            <img src="gambar-artikel/<?php echo $data['gambar'] ?>" class="crd-img-artikel mb-3" alt="Gambar Artikel">
             <h5 class="fw-bold text-capitalize mb-1 text-start">
               <?php
               echo $data['judul_artikel'];
@@ -219,7 +224,7 @@
             </h5>
             <p class="lh-base mb-2">
               <?php
-              echo (str_word_count($data['isiberita']) > 60 ? substr($data['isiberita'], 0, 200) . "[..]" : $data['isiberita']);
+              echo (str_word_count($data['isiberita']) > 200 ? substr($data['isiberita'], 0, 300) . " [...] " : $data['isiberita']);
               ?>
             </p>
             <!-- <a href="artikel/isi-artikel.html"><button type="button" class="mt-2 text-capitalize btn btn-primary fw-bold">baca
