@@ -23,7 +23,12 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
     <link rel="shortcut icon" type="image/x-icon" href="../image/LOGO ST KHADIJAH.png" />
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/22.0.0/classic/ckeditor.js"></script>
+
 </head>
 
 <body class="sb-nav-fixed">

@@ -40,6 +40,8 @@ if (isset($_GET['halaman'])) {
         include 'UI/visimisi.php';
     } elseif ($_GET['halaman'] == "visimisi") {
         include 'UI/visimisi.php';
+    } elseif ($_GET['halaman'] == "tambahartikel") {
+        include 'Proses/tambahartikel.php';
     }
 } else {
     include 'home.php';

@@ -7,7 +7,7 @@
                     </ol>
 
                     <h2 class="accordion-header" id="flush-headingOne">
-                        <a href="../Proses/tambahartikel.php"><button type="button" class="btn btn-primary btn-lg mb-4"><i class="bi bi-plus-circle"></i> Tambah Data</button></a>
+                        <a href="index.php?halaman=tambahartikel"><button type="button" class="btn btn-primary btn-lg mb-4"><i class="bi bi-plus-circle"></i> Tambah Data</button></a>
                     </h2>
 
                     <div class="card shadow-sm mb-4">
@@ -24,21 +24,95 @@
                                         <th>Jenis Spesialis</th>
                                         <th>Judul Artikel</th>
                                         <th>Waktu Posting</th>
+                                        <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Irfan Surya</td>
-                                        <td>Bedah</td>
-                                        <td>Dahsyatnya Istigfar</td>
-                                        <td>17 Juni 1999</td>
-                                        <td>
-                                            <button class="btn btn-warning" type="submit"><i class="bi bi-pencil-square"></i></button>
-                                            <button class="btn btn-danger" type="submit"><i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    $no = 1;
+                                    $ambil_data = $host->query("select * from berita join admin on berita.id_admin = admin.id_admin"); ?>
+                                    <?php while ($data = $ambil_data->fetch_assoc()) {
+                                    ?>
+                                        <tr>
+                                            <td>
+                                                <?php echo $no ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $data['nama'] ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $data['jenis_spesialis'] ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $data['judul_artikel'] ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $data['tanggal'] ?>
+                                            </td>
+                                            <td>
+                                                <?php
+                                                $status = $data['status'];
+                                                if ($status == "Y") {
+                                                    echo "Berita Utama";
+                                                } elseif ($status == "S") {
+                                                    echo "disembunyikan";
+                                                } else {
+                                                    echo "Normal";
+                                                }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <form method="post" enctype="multipart/form-data">
+                                                    <input type="text" id="id_berita" name="id_berita" value="<?php echo $data['id_berita'] ?>" hidden>
+
+                                                    <button class="btn btn-danger" type="submit" name="hapus" onclick="return confirm('Yakin Hapus?')"><i class="bi bi-trash3"></i></button>
+                                                    <button class="btn btn-warning" type="submit" name="edit"><i class="bi bi-pencil-square"></i></button>
+                                                    <?php
+                                                    if ($status == "S") {
+                                                        echo '<button class="btn btn-primary" type="submit" name="tampilkan"><i class="bi bi-eye"></i></button>';
+                                                    } else {
+                                                        echo ' <button class="btn btn-secondary" type="submit" name="sembunyikan"><i class="bi bi-eye-slash"></i></button>';
+                                                    }
+                                                    ?>
+                                                </form>
+
+                                            </td>
+                                            <!-- <td>
+                                                <button class="btn btn-warning" type="submit"><i class="bi bi-pencil-square"></i></button>
+                                                <button class="btn btn-danger" type="submit"><i class="bi bi-trash3"></i></button>
+                                                <button class="btn btn-secondary" type="submit"><i class="bi bi-eye-slash"></i></button>
+                                            </td> -->
+                                        </tr>
+                                        <?php $no++; ?>
+                                    <?php  } ?>
+                                    <?php
+                                    if (isset($_POST['sembunyikan'])) {
+                                        $result = mysqli_query($host, "UPDATE berita SET status = 'S' where id_berita='$_POST[id_berita]'");
+                                        if (!$result) {
+                                            die('Query Error : ' . mysqli_errno($host) .
+                                                ' - ' . mysqli_error($host));
+                                        } else {
+                                            echo "<div class='alert alert-success text-center'>Artikel disembunyikan</div>";
+                                            echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=artikel'>";
+                                        }
+                                    } elseif (isset($_POST['tampilkan'])) {
+                                        $result = mysqli_query($host, "UPDATE berita SET status = 'T' where id_berita='$_POST[id_berita]'");
+                                        if (!$result) {
+                                            die('Query Error : ' . mysqli_errno($host) .
+                                                ' - ' . mysqli_error($host));
+                                        } else {
+                                            echo "<div class='alert alert-success text-center'>Artikel di tampilkan</div>";
+                                            echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=artikel'>";
+                                        }
+                                    } elseif (isset($_POST['hapus'])) {
+
+                                        $host->query("delete from berita where id_berita = '$_POST[id_berita]'");
+                                        echo "<script> location='index.php?halaman=artikel'</script>";
+                                    } elseif (isset($_POST['edit'])) {
+                                        echo "<script> location='index.php?halaman=editberita&id_berita=$_POST[id_berita]'</script>";
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>

@@ -31,6 +31,19 @@
     }
 </script>
 <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#prev').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<script>
     $(document).ready(function() {
         $('#gambar').change(function() {
             readURL(this);
