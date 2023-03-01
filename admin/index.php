@@ -34,8 +34,8 @@ if (isset($_GET['halaman'])) {
         include 'UI/kritiksaran.php';
     } elseif ($_GET['halaman'] == "kontak") {
         include 'UI/kontak.php';
-    } elseif ($_GET['halaman'] == "visimisi") {
-        include 'UI/visimisi.php';
+    } elseif ($_GET['halaman'] == "galeri") {
+        include 'UI/galeri.php';
     } elseif ($_GET['halaman'] == "visimisi") {
         include 'UI/visimisi.php';
     } elseif ($_GET['halaman'] == "visimisi") {

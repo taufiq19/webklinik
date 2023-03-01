@@ -6,8 +6,8 @@ include 'header.php'
 
 <?php
 if (isset($_GET['halaman'])) {
-  if ($_GET['halaman'] == "artikel") {
-    include 'UI/artikel.php';
+  if ($_GET['halaman'] == "isiartikel") {
+    include 'isi-artikel.php';
   } elseif ($_GET['halaman'] == "fasilitas") {
     include 'UI/fasilitas.php';
   } elseif ($_GET['halaman'] == "tambahartikel") {

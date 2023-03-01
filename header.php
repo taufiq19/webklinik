@@ -1,3 +1,6 @@
+<?php  
+include('admin/koneksi/konek.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
