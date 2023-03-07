@@ -214,7 +214,7 @@
       <?php while ($data = $ambil_data->fetch_assoc()) {
 
       ?>
-        <div class="col-lg-4 col-md-5 col-11">
+        <div class="col-lg-4 col-md-5 col-11 border">
           <div class="card-artikel">
             <img src="gambar-artikel/<?php echo $data['gambar'] ?>" class="crd-img-artikel mb-3" alt="Gambar Artikel">
             <h5 class="fw-bold text-capitalize mb-1 text-start">
@@ -229,7 +229,7 @@
             </p>
             <!-- <a href="artikel/isi-artikel.html"><button type="button" class="mt-2 text-capitalize btn btn-primary fw-bold">baca
                 selengkapnya</button></a> -->
-            <a href="index.php?halaman=isiartikel&id=<?php echo $data['id_berita'] ?>"><button type="button" class="mt-2 text-capitalize btn btn-primary fw-bold">baca
+            <a href="index.php?halaman=isiartikel&id=<?php echo $data['id_berita'] ?>"><button type="button" class="mt-2 text-capitalize btn btn-primary fw-bold ">baca
                 selengkapnya</button></a>
           </div>
         </div>
