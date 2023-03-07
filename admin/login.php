@@ -37,10 +37,10 @@ if (isset($_SESSION['admin'])) {
                             <h1 class="text-uppercase">selamat datang</h1>
                             <h2 class="text-uppercase">halaman login admin</h2>
                         </div>
-                        <div class="col-md-9 col-lg-6 col-xl-5">
+                        <div class="col-md-9 col-lg-6 col-xl-5 mt-5">
                             <img src="gambar/LOGO ST KHADIJAH.png" class="img-fluid" style="width: 300px;" alt="Logo Klinik">
                         </div>
-                        <div class="col-md-8 col-lg-6 col-xl-4">
+                        <div class="col-md-8 col-lg-6 col-xl-4 mt-5">
                             <form method="POST">
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
