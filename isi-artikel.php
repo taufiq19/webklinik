@@ -131,7 +131,7 @@ $d = mysqli_fetch_assoc($data);
             <div class="col-lg-6 col-md-6 col-12 my-2" data-aos="zoom-in-down" data-aos-duration="1000">
                 <a href="tel:0421-21313">
                     <div class="card crd-hub hub-gerak bg-cs border-0">
-                        <img src="../image/hub kami/callcenter.jpg" class="card-img img-ukuran rounded-0 shadow" alt="Gambar Call Center">
+                        <img src="image/hub kami/callcenter.jpg" class="card-img img-ukuran rounded-0 shadow" alt="Gambar Call Center">
                         <div class="card-img-overlay pt-hub text-hub txt-ctc txt-sd">
                             <h2 class="card-title fw-semibold fs-4">Klik Disini Untuk Telepon !</h5>
                                 <h1 class="fw-semibold fs-1">(0421) 21313</h1>
@@ -142,7 +142,7 @@ $d = mysqli_fetch_assoc($data);
             <div class="col-lg-6 col-md-6 col-12 my-2" data-aos="zoom-in-down" data-aos-duration="1000">
                 <a href="https://wa.me/6285256953133">
                     <div class="card crd-hub hub-gerak bg-wa border-0">
-                        <img src="../image/hub kami/whatsapp.jpg" class="card-img img-ukuran rounded-0 shadow" alt="Gambar Call Center">
+                        <img src="image/hub kami/whatsapp.jpg" class="card-img img-ukuran rounded-0 shadow" alt="Gambar Call Center">
                         <div class=" card-img-overlay pt-hub text-hub txt-ctc txt-sd">
                             <h2 class="card-title fw-semibold bg-txt fs-4">Klik Disini Untuk Whatsapp !</h5>
                                 <h1 class="fw-semibold fs-1">+6285256953133</h1>
