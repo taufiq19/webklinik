@@ -110,7 +110,7 @@
                                         $host->query("delete from berita where id_berita = '$_POST[id_berita]'");
                                         echo "<script> location='index.php?halaman=artikel'</script>";
                                     } elseif (isset($_POST['edit'])) {
-                                        echo "<script> location='index.php?halaman=editberita&id_berita=$_POST[id_berita]'</script>";
+                                        echo "<script> location='index.php?halaman=editartikel&id_berita=$_POST[id_berita]'</script>";
                                     }
                                     ?>
                                 </tbody>
