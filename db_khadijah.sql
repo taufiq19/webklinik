@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2023 at 12:17 AM
+-- Generation Time: Mar 25, 2023 at 12:56 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -85,6 +85,28 @@ CREATE TABLE `berita` (
 INSERT INTO `berita` (`id_berita`, `id_admin`, `judul_artikel`, `jenis_spesialis`, `isiberita`, `tanggal`, `tag`, `gambar`, `ket_gambar`, `status`) VALUES
 (21, 1, 'jhghg', 'PENYAKIT DALAM', '<p>hghgh</p>\r\n', '2023-03-24 00:06:53', 'shghjj', '2303240106531 (2).jpg', 'kdsks', 'Y'),
 (25, 1, 'mantap gak tuh ?', 'KANDUNGAN', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n\r\n<h2>Why do we use it ok?</h2>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', '2023-03-23 23:19:42', 'sipp', '2303240019421 (17).jpg', 'mantap gaess', 'Y');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dokter`
+--
+
+CREATE TABLE `dokter` (
+  `id_dokter` int(11) NOT NULL,
+  `nama` varchar(250) NOT NULL,
+  `jabatan` varchar(250) NOT NULL,
+  `gambar` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `dokter`
+--
+
+INSERT INTO `dokter` (`id_dokter`, `nama`, `jabatan`, `gambar`) VALUES
+(1, 'dr. Taufiq Hidayat', '', '230325004040profile.png'),
+(4, 'nh', 'Dokter Umum', '230325004800Screenshot 2023-03-17 141424.png'),
+(5, 'nh', 'Dokter Umum', '230325004912Screenshot 2023-03-17 141424.png');
 
 -- --------------------------------------------------------
 
@@ -297,6 +319,12 @@ ALTER TABLE `berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
+-- Indexes for table `dokter`
+--
+ALTER TABLE `dokter`
+  ADD PRIMARY KEY (`id_dokter`);
+
+--
 -- Indexes for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
@@ -371,6 +399,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `berita`
   MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `dokter`
+--
+ALTER TABLE `dokter`
+  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `fasilitas`
