@@ -17,11 +17,11 @@
       <?php $ambil_data_utama = $host->query("select * from berita join admin on berita.id_admin = admin.id_admin WHERE status='Y' ORDER BY tanggal DESC LIMIT 2"); ?>
       <?php while ($data_utama = $ambil_data_utama->fetch_assoc()) {
       ?>
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item c-i active" data-bs-interval="10000">
           <img src="gambar-artikel/<?php echo $data_utama['gambar'] ?>" class="d-block w-100 img-fluid" alt="Banner Klinik">
           <div class="carousel-caption cc-index">
-            <h3 class="txt-satu fw-bold"><?php echo $data_utama['judul_artikel'] ?></h3>
-            <p class="txt-dua fw-bold">Web Sistem Informasi Klinik Utama Sitti Khadijah Kota Parepare</p>
+            <h3 class="txt-satu fw-bold text-white"><?php echo $data_utama['judul_artikel'] ?></h3>
+            <p class="txt-dua fw-bold text-white">Web Sistem Informasi Klinik Utama Sitti Khadijah Kota Parepare</p>
           </div>
         </div>
       <?php } ?>
