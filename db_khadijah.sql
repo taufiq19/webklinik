@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2023 at 08:21 AM
+-- Generation Time: Mar 25, 2023 at 12:17 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -83,9 +83,30 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `id_admin`, `judul_artikel`, `jenis_spesialis`, `isiberita`, `tanggal`, `tag`, `gambar`, `ket_gambar`, `status`) VALUES
-(21, 1, 'jhghg', 'PENYAKIT DALAM', '<p>hghgh</p>\r\n', '2023-03-01 03:29:32', 'shgh', '230301035034ttd subarman.png', '', 'T'),
-(25, 1, 'mantap gak tuh', 'BEDAH', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n\r\n<h2>Why do we use it?</h2>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', '2023-03-01 06:48:45', 'sipp', '230301074845ttd selpi.png', 'mantap gaess', 'N'),
-(26, 1, 'jghgdshghs', 'PENYAKIT DALAM', '<p>dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;dsjgdsyghsd dsh dshhsd ghsdghs dsdgh sdghds gh dshsdgdsh gdsh dgsdgs hds ghdgs&nbsp;</p>\r\n', '2023-03-01 07:02:15', 'ok', '2303010802151 (5).jpg', 'gambar mantap', 'Y');
+(21, 1, 'jhghg', 'PENYAKIT DALAM', '<p>hghgh</p>\r\n', '2023-03-24 00:06:53', 'shghjj', '2303240106531 (2).jpg', 'kdsks', 'Y'),
+(25, 1, 'mantap gak tuh ?', 'KANDUNGAN', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n\r\n<h2>Why do we use it ok?</h2>\r\n\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n', '2023-03-23 23:19:42', 'sipp', '2303240019421 (17).jpg', 'mantap gaess', 'Y');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fasilitas`
+--
+
+CREATE TABLE `fasilitas` (
+  `id_fasilitas` int(11) NOT NULL,
+  `unit` varchar(50) DEFAULT NULL,
+  `jenisfasilitas` varchar(50) DEFAULT NULL,
+  `gambar` text DEFAULT NULL,
+  `ketgambar` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `fasilitas`
+--
+
+INSERT INTO `fasilitas` (`id_fasilitas`, `unit`, `jenisfasilitas`, `gambar`, `ketgambar`) VALUES
+(1, 'IGD', 'okey', '2303242338451 (1).jpg', 'okey'),
+(2, 'Rawat Inap', 'jjbsnd', '2303250016081 (1).jpg', 'hsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs bvbvbvbvhsghgs xx bvbvbvbv');
 
 -- --------------------------------------------------------
 
@@ -276,6 +297,12 @@ ALTER TABLE `berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
+-- Indexes for table `fasilitas`
+--
+ALTER TABLE `fasilitas`
+  ADD PRIMARY KEY (`id_fasilitas`);
+
+--
 -- Indexes for table `gambar`
 --
 ALTER TABLE `gambar`
@@ -343,7 +370,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `fasilitas`
+--
+ALTER TABLE `fasilitas`
+  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `gambar`

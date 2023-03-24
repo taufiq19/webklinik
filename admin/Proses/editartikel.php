@@ -10,7 +10,7 @@ $data = $ambil->fetch_assoc();
         <div class="container-fluid px-4">
             <h1 class="mt-4">User Interface</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">Artikel</li>
+                <li class="breadcrumb-item">Artikel</li>
                 <li class="breadcrumb-item active">Ubah Artikel</li>
             </ol>
 
