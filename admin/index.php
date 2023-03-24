@@ -44,6 +44,10 @@ if (isset($_GET['halaman'])) {
         include 'Proses/tambahartikel.php';
     } elseif ($_GET['halaman'] == "editartikel") {
         include 'Proses/editartikel.php';
+    } elseif ($_GET['halaman'] == "tambahfasilitas") {
+        include 'Proses/tambahfasilitas.php';
+    } elseif ($_GET['halaman'] == "editfasilitas") {
+        include 'Proses/editfasilitas.php';
     }
 } else {
     include 'home.php';
