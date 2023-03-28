@@ -7,7 +7,7 @@
             </ol>
 
             <h2 class="accordion-header" id="flush-headingOne">
-                <a href="../Proses/tambahjadwaldokter.php"><button type="button" class="btn btn-primary btn-lg mb-4"><i class="bi bi-plus-circle"></i> Tambah Data</button></a>
+                <a href="index.php?halaman=tambahjadwal"><button type="button" class="btn btn-primary btn-lg mb-4"><i class="bi bi-plus-circle"></i> Tambah Data</button></a>
             </h2>
 
             <div class="card shadow-sm mb-4">
@@ -30,19 +30,45 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>dr. Srihikmawaty Zainal</td>
-                                <td>Dokter Umum</td>
-                                <td>Senin - Jum'at</td>
-                                <td>09.00-16.00</td>
-                                <td>Klinik Sitti Khadijah Parepare</td>
-                                <td>-</td>
-                                <td>
-                                    <button class="btn btn-warning" type="submit"><i class="bi bi-pencil-square"></i></button>
-                                    <button class="btn btn-danger" type="submit"><i class="bi bi-trash3"></i></button>
-                                </td>
-                            </tr>
+                            <?php
+                            $no = 1;
+                            $ambil_data = $host->query("SELECT * from jadwal_dokter JOIN dokter ON jadwal_dokter.id_dokter = dokter.id_dokter");
+                            // $ambil_data = $host->query("select * from dokter"); 
+                            ?>
+                            <?php while ($data = $ambil_data->fetch_assoc()) {
+                            ?>
+                                <tr>
+                                    <td><?php echo $no; ?></td>
+                                    <td><?php echo $data['nama'] ?></td>
+                                    <td><?php echo $data['jabatan'] ?></td>
+                                    <td><?php echo $data['hari'] ?></td>
+                                    <td><?php echo $data['waktu'] ?></td>
+                                    <td><?php echo $data['lokasi'] ?></td>
+                                    <td><?php echo $data['keterangan'] ?></td>
+                                    <td>
+                                        <form method="post" enctype="multipart/form-data">
+                                            <input type="text" id="id_jadwal" name="id_jadwal" value="<?php echo $data['id_jadwal'] ?>" hidden>
+
+                                            <button class="btn btn-danger mb-1" type="submit" name="hapus" onclick="return confirm('Yakin Hapus?')"><i class="bi bi-trash3"></i></button>
+                                            <button class="btn btn-warning mb-1" type="submit" name="edit"><i class="bi bi-pencil-square"></i></button>
+
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            <?php $no++;
+                            }
+
+                            if (isset($_POST['hapus'])) {
+                                $host->query("delete from jadwal_dokter where id_jadwal = '$_POST[id_jadwal]'");
+                                echo "<script> location='index.php?halaman=jadwaldokter'</script>";
+                            } elseif (isset($_POST['edit'])) {
+                                echo "<script> location='index.php?halaman=editjadwal&id_jadwal=$_POST[id_jadwal]'</script>";
+                            }
+
+                            ?>
+
+
                         </tbody>
                     </table>
                 </div>
