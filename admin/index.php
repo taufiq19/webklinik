@@ -48,6 +48,14 @@ if (isset($_GET['halaman'])) {
         include 'Proses/tambahfasilitas.php';
     } elseif ($_GET['halaman'] == "editfasilitas") {
         include 'Proses/editfasilitas.php';
+    } elseif ($_GET['halaman'] == "tambahdokter") {
+        include 'Proses/tambahdokter.php';
+    } elseif ($_GET['halaman'] == "editdokter") {
+        include 'Proses/editdokter.php';
+    } elseif ($_GET['halaman'] == "tambahjadwal") {
+        include 'Proses/tambahjadwaldokter.php';
+    } elseif ($_GET['halaman'] == "editjadwal") {
+        include 'Proses/editjadwal.php';
     }
 } else {
     include 'home.php';
