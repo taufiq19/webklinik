@@ -258,7 +258,7 @@
 <!-- Akhir Lokasi Klinik -->
 
 <!-- Float Menu -->
-<div class="floating-icon">
+<div class="floating-icon d-none d-sm-block">
   <a href="layanan/daftar-online.html">
     <button class="btn-melayang bm-tiga d-flex justify-content-center align-items-center">
       <span class="span-melayang text-capitalize text-white fs-6">daftar online</span>
