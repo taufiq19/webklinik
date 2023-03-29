@@ -1,3 +1,9 @@
+<?php
+$id_admin = $_SESSION['admin']['id_admin'];
+$ambil = $host->query("select * from mcu where id_mcu = '$_GET[id_mcu]'");
+$data = $ambil->fetch_assoc();
+?>
+
 <!-- Isi Dashboard -->
 <div id="layoutSidenav_content">
     <main>
@@ -10,19 +16,19 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Tambah Data
+                    Ubah Data
                 </div>
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="jenis_paket" class="form-label">Jenis Paket</label>
-                            <input type="text" name="jenis_paket" class="form-control" id="jenis_paket" aria-describedby="">
+                            <input type="text" value="<?php echo $data['jenis_paket'] ?>" name="jenis_paket" class="form-control" id="jenis_paket" aria-describedby="">
                         </div>
                         <div class="input-group mb-3">
                             <label for="harga" class="form-label">Harga</label>
                             <div class="input-group">
                                 <span class="input-group-text">Rp</span>
-                                <input type="number" name="harga" id="harga" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <input type="number" name="harga" id="harga" value="<?php echo $data['harga'] ?>" class="form-control" aria-label="Amount (to the nearest dollar)">
                                 <span class="input-group-text">,-00</span>
                             </div>
                         </div>
@@ -30,18 +36,18 @@
                             <label for="jenis_pemeriksaan" class="form-label">Pemeriksaan</label>
                             <select class="form-select" name="jenis_pemeriksaan" id="jenis_pemeriksaan" aria-label="Default select example">
                                 <option selected>Pilih Pemeriksaan</option>
-                                <option value="Pemeriksaan GDS">Pemeriksaan GDS</option>
-                                <option value="Pemeriksaan Urin">Pemeriksaan Urin</option>
+                                <option value="Pemeriksaan GDS" <?= $data['jenis_pemeriksaan'] == 'Pemeriksaan GDS' ? ' selected="selected"' : ''; ?>>Pemeriksaan GDS</option>
+                                <option value="Pemeriksaan Urin" <?= $data['jenis_pemeriksaan'] == 'Pemeriksaan Urin' ? ' selected="selected"' : ''; ?>>Pemeriksaan Urin</option>
                             </select>
                         </div>
-                      
+
                         <button type="submit" name="save" class="btn btn-primary">Simpan</button>
                         <button type="submit" class="btn btn-primary">Batal</button>
                     </form>
                     <?php
                     if (isset($_POST['save'])) {
+                        $result = mysqli_query($host, "UPDATE mcu SET jenis_pemeriksaan = '$_POST[jenis_pemeriksaan]',jenis_paket = '$_POST[jenis_paket]',harga = '$_POST[harga]' WHERE id_mcu='$_GET[id_mcu]'");
 
-                        $result = mysqli_query($host, "insert into mcu(jenis_paket, jenis_pemeriksaan, harga) values('$_POST[jenis_paket]','$_POST[jenis_pemeriksaan]','$_POST[harga]')");
                         // cek hasil query
                         if (!$result) {
                             die('Query Error : ' . mysqli_errno($host) .

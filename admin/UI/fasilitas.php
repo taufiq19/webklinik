@@ -66,7 +66,7 @@
                                         <?php
                                         if (isset($_POST['hapus'])) {
                                             $host->query("delete from fasilitas where id_fasilitas = '$_POST[id_fasilitas]'");
-                                            // echo "<script> location='index.php?halaman=fasilitas'</script>";
+                                            echo "<script> location='index.php?halaman=fasilitas'</script>";
                                         } elseif (isset($_POST['edit'])) {
                                             echo "<script> location='index.php?halaman=editfasilitas&id_fasilitas=$_POST[id_fasilitas]'</script>";
                                         }

@@ -17,7 +17,7 @@ $data = $ambil->fetch_assoc();
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Tambah Data
+                    Ubah Data
                 </div>
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">

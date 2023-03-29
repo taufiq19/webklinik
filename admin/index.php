@@ -56,6 +56,18 @@ if (isset($_GET['halaman'])) {
         include 'Proses/tambahjadwaldokter.php';
     } elseif ($_GET['halaman'] == "editjadwal") {
         include 'Proses/editjadwal.php';
+    } elseif ($_GET['halaman'] == "tambahlab") {
+        include 'Proses/tambahlab.php';
+    } elseif ($_GET['halaman'] == "editlab") {
+        include 'Proses/editlab.php';
+    } elseif ($_GET['halaman'] == "editmcu") {
+        include 'Proses/editmcu.php';
+    } elseif ($_GET['halaman'] == "tambahmcu") {
+        include 'Proses/tambahmcu.php';
+    } elseif ($_GET['halaman'] == "tambahalur") {
+        include 'Proses/tambahalurpelayanan.php';
+    } elseif ($_GET['halaman'] == "editalur") {
+        include 'Proses/editalurpelayanan.php';
     }
 } else {
     include 'home.php';

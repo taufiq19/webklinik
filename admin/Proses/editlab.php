@@ -1,3 +1,9 @@
+<?php
+$id_admin = $_SESSION['admin']['id_admin'];
+$ambil = $host->query("select * from lab where id_lab = '$_GET[id_lab]'");
+$data = $ambil->fetch_assoc();
+?>
+
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
@@ -9,19 +15,19 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Tambah Data
+                    Ubah Data
                 </div>
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="namagambar" class="form-label">Jenis Pemeriksaan</label>
-                            <input type="text" class="form-control" name="jenis_pemeriksaan" id="jenis_pemeriksaan" aria-describedby="">
+                            <input type="text" class="form-control" name="jenis_pemeriksaan" value="<?php echo $data['jenis_pemeriksaan'] ?>" id="jenis_pemeriksaan" aria-describedby="">
                         </div>
                         <div class="input-group mb-3">
                             <label for="harga" class="form-label">Harga</label>
                             <div class="input-group">
                                 <span class="input-group-text">Rp</span>
-                                <input type="number" name="harga" id="harga" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <input type="number" name="harga" id="harga" value="<?php echo $data['harga'] ?>" class="form-control" aria-label="Amount (to the nearest dollar)">
                                 <span class="input-group-text">,-00</span>
                             </div>
                         </div>
@@ -30,8 +36,8 @@
                     </form>
                     <?php
                     if (isset($_POST['save'])) {
-                       
-                        $result = mysqli_query($host, "insert into lab(jenis_pemeriksaan, harga) values('$_POST[jenis_pemeriksaan]','$_POST[harga]')");
+                        $result = mysqli_query($host, "UPDATE lab SET jenis_pemeriksaan = '$_POST[jenis_pemeriksaan]',harga = '$_POST[harga]' WHERE id_lab='$_GET[id_lab]'");
+
                         // cek hasil query
                         if (!$result) {
                             die('Query Error : ' . mysqli_errno($host) .
