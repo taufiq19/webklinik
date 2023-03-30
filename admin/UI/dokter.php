@@ -1,3 +1,10 @@
+<?php
+if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
+    //echo " <script>location:='proses/login.php'</script>";
+    header('location:../login.php');
+    exit();
+}
+?>
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">

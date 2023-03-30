@@ -68,6 +68,10 @@ if (isset($_GET['halaman'])) {
         include 'Proses/tambahalurpelayanan.php';
     } elseif ($_GET['halaman'] == "editalur") {
         include 'Proses/editalurpelayanan.php';
+    } elseif ($_GET['halaman'] == "tambahprodukapotik") {
+        include 'Proses/tambahprodukapotik.php';
+    } elseif ($_GET['halaman'] == "editprodukapotik") {
+        include 'Proses/editprodukapotik.php';
     }
 } else {
     include 'home.php';

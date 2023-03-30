@@ -1,4 +1,9 @@
 <?php
+if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
+    //echo " <script>location:='proses/login.php'</script>";
+    header('location:../login.php');
+    exit();
+}
 $id_admin = $_SESSION['admin']['id_admin'];
 $ambil = $host->query("select * from dokter where id_dokter = '$_GET[id_dokter]'");
 $data = $ambil->fetch_assoc();

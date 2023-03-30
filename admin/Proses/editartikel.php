@@ -1,4 +1,10 @@
 <?php
+if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
+    //echo " <script>location:='proses/login.php'</script>";
+    header('location:../login.php');
+    exit();
+}
+
 $id_admin = $_SESSION['admin']['id_admin'];
 $ambil = $host->query("select * from berita where id_berita = '$_GET[id_berita]'");
 $data = $ambil->fetch_assoc();
@@ -37,7 +43,7 @@ $data = $ambil->fetch_assoc();
                             <input type="text" class="form-control" name="judul" value="<?php echo $data['judul_artikel'] ?>" id="judul">
                         </div>
                         <textarea class="ckeditor" id="ckedtor" name="isiartikel"><?php echo $data['isiberita'] ?></textarea>
-                        <img src="../gambar-artikel/<?php echo $data['gambar']?>" alt="preview" class="img-fluid mt-3 mb-3" id="prev">
+                        <img src="../gambar-artikel/<?php echo $data['gambar'] ?>" alt="preview" class="img-fluid mt-3 mb-3" id="prev">
                         <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Masukkan Gambar</label>
                             <input class="form-control" type="file" name="gambar" id="gambar" multiple>

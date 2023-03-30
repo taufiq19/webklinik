@@ -1,3 +1,8 @@
+<?php
+$ambil_dokter = $host->query("SELECT COUNT(id_dokter) AS total FROM dokter ");
+$data_dokter = $ambil_dokter->fetch_assoc();
+?>
+
 <!-- Isi Dashboard -->
 <div id="layoutSidenav_content">
     <main>
@@ -11,7 +16,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                         Jumlah Dokter</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">10610</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $data_dokter['total'] ?></div>
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-user-md fa-2x text-gray-300"></i>
