@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2023 at 12:56 AM
+-- Generation Time: Apr 04, 2023 at 01:33 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -62,6 +62,27 @@ INSERT INTO `admin` (`id_admin`, `username`, `password`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `alur_pelayanan`
+--
+
+CREATE TABLE `alur_pelayanan` (
+  `id_alur` int(11) NOT NULL,
+  `nama_alur` varchar(250) NOT NULL,
+  `gambar` text NOT NULL,
+  `penjelasan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `alur_pelayanan`
+--
+
+INSERT INTO `alur_pelayanan` (`id_alur`, `nama_alur`, `gambar`, `penjelasan`) VALUES
+(4, 'hhgomm nbn', '230329074615', 'hghg'),
+(5, 'hhg', '2303290744131 (16).jpg', 'hghg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `berita`
 --
 
@@ -106,7 +127,8 @@ CREATE TABLE `dokter` (
 INSERT INTO `dokter` (`id_dokter`, `nama`, `jabatan`, `gambar`) VALUES
 (1, 'dr. Taufiq Hidayat', '', '230325004040profile.png'),
 (4, 'nh', 'Dokter Umum', '230325004800Screenshot 2023-03-17 141424.png'),
-(5, 'nh', 'Dokter Umum', '230325004912Screenshot 2023-03-17 141424.png');
+(5, 'andalang e', 'Dokter Umum', '230328001619Screenshot 2023-03-15 144754.png'),
+(6, 'ok', 'Dokter Paruh Waktu', '230328010130Screenshot 2023-03-15 144754.png');
 
 -- --------------------------------------------------------
 
@@ -154,6 +176,28 @@ INSERT INTO `gambar` (`id_gambar`, `nama_gambar`, `gambar`, `ket_gambar`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `jadwal_dokter`
+--
+
+CREATE TABLE `jadwal_dokter` (
+  `id_jadwal` int(10) NOT NULL,
+  `id_dokter` int(10) NOT NULL,
+  `hari` varchar(50) NOT NULL,
+  `waktu` varchar(50) NOT NULL,
+  `lokasi` varchar(100) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `jadwal_dokter`
+--
+
+INSERT INTO `jadwal_dokter` (`id_jadwal`, `id_dokter`, `hari`, `waktu`, `lokasi`, `keterangan`) VALUES
+(1, 5, 'Kamis', '07.00 - 09.00', '1', 'a');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `komentar`
 --
 
@@ -184,6 +228,24 @@ INSERT INTO `komentar` (`id_komentar`, `nama`, `komentar`, `lampiran`, `hp`) VAL
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `komitmen`
+--
+
+CREATE TABLE `komitmen` (
+  `id_komitmen` int(11) NOT NULL,
+  `isi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `komitmen`
+--
+
+INSERT INTO `komitmen` (`id_komitmen`, `isi`) VALUES
+(1, '<p>jsdhjds dbdhghf sdg</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kontak`
 --
 
@@ -205,6 +267,25 @@ INSERT INTO `kontak` (`id_kontak`, `hp`, `alamat`, `email`, `web`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `lab`
+--
+
+CREATE TABLE `lab` (
+  `id_lab` int(11) NOT NULL,
+  `jenis_pemeriksaan` varchar(250) NOT NULL,
+  `harga` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `lab`
+--
+
+INSERT INTO `lab` (`id_lab`, `jenis_pemeriksaan`, `harga`) VALUES
+(1, 'mantap', 500000);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `login`
 --
 
@@ -214,6 +295,58 @@ CREATE TABLE `login` (
   `password` varchar(100) NOT NULL,
   `nama` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mcu`
+--
+
+CREATE TABLE `mcu` (
+  `id_mcu` int(11) NOT NULL,
+  `jenis_pemeriksaan` varchar(250) NOT NULL,
+  `jenis_paket` varchar(250) NOT NULL,
+  `harga` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `mcu`
+--
+
+INSERT INTO `mcu` (`id_mcu`, `jenis_pemeriksaan`, `jenis_paket`, `harga`) VALUES
+(1, 'Pemeriksaan GDS', 'okey', 50000),
+(2, 'Pemeriksaan Urin', 'okey  hg', 50000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produk`
+--
+
+CREATE TABLE `produk` (
+  `id_produk` int(11) NOT NULL,
+  `nama_produk` varchar(250) NOT NULL,
+  `harga` int(50) NOT NULL,
+  `kategori` varchar(250) NOT NULL,
+  `deskripsi` text DEFAULT NULL,
+  `komposisi` text DEFAULT NULL,
+  `kemasan` varchar(250) DEFAULT NULL,
+  `manfaat` varchar(250) DEFAULT NULL,
+  `dosis` varchar(250) DEFAULT NULL,
+  `penyajian` text DEFAULT NULL,
+  `mims` varchar(20) DEFAULT NULL,
+  `izin_edar` varchar(250) DEFAULT NULL,
+  `golongan_obat` varchar(250) DEFAULT NULL,
+  `ket` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga`, `kategori`, `deskripsi`, `komposisi`, `kemasan`, `manfaat`, `dosis`, `penyajian`, `mims`, `izin_edar`, `golongan_obat`, `ket`) VALUES
+(2, 'obat kuat 2', 25000, 'Obat', 'dsjgsdhsd', '2', '1', 'hgg', 'hghgh', 'bvbv', 'hgh', '6564', '2', 'vfvgf'),
+(4, 'okey', 15000, 'Obat', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -231,7 +364,7 @@ CREATE TABLE `sejarah` (
 --
 
 INSERT INTO `sejarah` (`id_sejarah`, `sejarah`) VALUES
-(1, '<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"upload/1497490819.png\" style=\"height:346px; width:397px\" /></p>\r\n\r\n<p>Sejarah Kelurahan Lompoe</p>\r\n\r\n<p>jsdhjdsh</p>\r\n\r\n<p>djhdsj</p>\r\n');
+(1, '<p>dshgdfhgdf fdjhdfhdfjdf dfdfhjfdjh&nbsp;dshgdfhgdf fdjhdfhdfjdf dfdfhjfdjhdshgdfhgdf fdjhdfhdfjdf dfdfhjfdjhdshgdfhgdf fdjhdfhdfjdf dfdfhjfdjhdshgdfhgdf fdjhdfhdfjdf dfdfhjfdjh</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -296,6 +429,24 @@ CREATE TABLE `visi` (
 INSERT INTO `visi` (`id_visi`, `visi`) VALUES
 (1, '<p><strong>VISI:</strong></p>\r\n\r\n<p>TERWUJUDNYA PELAYANAN PRIMA KEPADA MASYARAKAT DALAM RANGKA MENDUKUNG KOTA BANDAR MADANI DENGAN MASYARAKAT YANG MANDIRI DAN RELIGIUS</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>MISI:</strong></p>\r\n\r\n<ol>\r\n	<li>MENINGKATKAN SUMBER DAYA MANUSIA, APARAT KELURAHAN YANG MANDIRI, CERDAS, SEHAT DAN BERDAYA SAING</li>\r\n	<li>MEWUJUDKAN MASYARAKAT RELIGIUS, RUKUN, AMAN DAN MANUSIAWI</li>\r\n	<li>MENCIPTAKAN KEPEDULIAN MASYARAKAT DENGAN BERKOMITMEN HEMAT DAN EFESIEN</li>\r\n	<li>MENINGKATKAN PENATAAN RUANG YANG BERWAWASAN LINGKUNGAN</li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visimisi`
+--
+
+CREATE TABLE `visimisi` (
+  `id` int(11) NOT NULL,
+  `isi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `visimisi`
+--
+
+INSERT INTO `visimisi` (`id`, `isi`) VALUES
+(1, '<p>bhghsd pokoekkok jsdgh</p>\r\n');
+
 --
 -- Indexes for dumped tables
 --
@@ -311,6 +462,12 @@ ALTER TABLE `about`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `alur_pelayanan`
+--
+ALTER TABLE `alur_pelayanan`
+  ADD PRIMARY KEY (`id_alur`);
 
 --
 -- Indexes for table `berita`
@@ -337,10 +494,22 @@ ALTER TABLE `gambar`
   ADD PRIMARY KEY (`id_gambar`);
 
 --
+-- Indexes for table `jadwal_dokter`
+--
+ALTER TABLE `jadwal_dokter`
+  ADD PRIMARY KEY (`id_jadwal`);
+
+--
 -- Indexes for table `komentar`
 --
 ALTER TABLE `komentar`
   ADD PRIMARY KEY (`id_komentar`);
+
+--
+-- Indexes for table `komitmen`
+--
+ALTER TABLE `komitmen`
+  ADD PRIMARY KEY (`id_komitmen`);
 
 --
 -- Indexes for table `kontak`
@@ -349,10 +518,28 @@ ALTER TABLE `kontak`
   ADD PRIMARY KEY (`id_kontak`);
 
 --
+-- Indexes for table `lab`
+--
+ALTER TABLE `lab`
+  ADD PRIMARY KEY (`id_lab`);
+
+--
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `mcu`
+--
+ALTER TABLE `mcu`
+  ADD PRIMARY KEY (`id_mcu`);
+
+--
+-- Indexes for table `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id_produk`);
 
 --
 -- Indexes for table `sejarah`
@@ -379,6 +566,12 @@ ALTER TABLE `visi`
   ADD PRIMARY KEY (`id_visi`);
 
 --
+-- Indexes for table `visimisi`
+--
+ALTER TABLE `visimisi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -395,6 +588,12 @@ ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `alur_pelayanan`
+--
+ALTER TABLE `alur_pelayanan`
+  MODIFY `id_alur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
@@ -404,7 +603,7 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `fasilitas`
@@ -419,10 +618,22 @@ ALTER TABLE `gambar`
   MODIFY `id_gambar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `jadwal_dokter`
+--
+ALTER TABLE `jadwal_dokter`
+  MODIFY `id_jadwal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
   MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `komitmen`
+--
+ALTER TABLE `komitmen`
+  MODIFY `id_komitmen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `kontak`
@@ -431,10 +642,28 @@ ALTER TABLE `kontak`
   MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `lab`
+--
+ALTER TABLE `lab`
+  MODIFY `id_lab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
   MODIFY `id_admin` int(15) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mcu`
+--
+ALTER TABLE `mcu`
+  MODIFY `id_mcu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `sejarah`
@@ -459,6 +688,12 @@ ALTER TABLE `video`
 --
 ALTER TABLE `visi`
   MODIFY `id_visi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `visimisi`
+--
+ALTER TABLE `visimisi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
