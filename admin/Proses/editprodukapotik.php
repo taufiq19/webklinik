@@ -16,7 +16,7 @@ $data = $ambil->fetch_assoc();
             <h1 class="mt-4">User Interface</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item ">Produk</li>
-                <li class="breadcrumb-item active">Tambah Produk</li>
+                <li class="breadcrumb-item active">Edit Produk</li>
             </ol>
 
             <div class="card mb-4">
@@ -48,12 +48,63 @@ $data = $ambil->fetch_assoc();
                                 <option value="Herbal" <?= $data['kategori'] == 'Herbal' ? ' selected="selected"' : ''; ?>>Herbal</option>
                             </select>
                         </div>
+                        <div class="mb-3">
+                            <label for="namagambar" class="form-label">Deskripsi</label>
+                            <input type="text" class="form-control" id="deskripsi" value="<?php echo $data['deskripsi'] ?>" name="deskripsi" aria-describedby="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="namagambar" class="form-label">Komposisi</label>
+                            <input type="" class="form-control" id="komposisi" name="komposisi" value="<?php echo $data['komposisi'] ?>" aria-describedby="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="jabatandokter" class="form-label">Kemasan</label>
+                            <select class="form-select" name="kemasan" id="kemasan" aria-label="Default select example">
+                                <option selected>Pilih Kemasan</option>
+                                <option value="1">...</option>
+                                <option value="2">...</option>
+                                <option value="3">...</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="namagambar" class="form-label">Manfaat</label>
+                            <input type="" class="form-control" id="manfaat" value="<?php echo $data['manfaat'] ?>" name="manfaat" aria-describedby="">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="namagambar" class="form-label">Dosis</label>
+                            <input type="" class="form-control" id="dosis" name="dosis" value="<?php echo $data['dosis'] ?>" aria-describedby="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="namagambar" class="form-label">Penyajian</label>
+                            <input type="" class="form-control" id="penyajian" name="penyajian" value="<?php echo $data['penyajian'] ?>" aria-describedby="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="namagambar" class="form-label">Nama Standar MIMS</label>
+                            <input type="" class="form-control" id="mims" name="mims" value="<?php echo $data['mims'] ?>" aria-describedby="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="namagambar" class="form-label">Nomor Izin Edar</label>
+                            <input type="" class="form-control" id="izin_edar" name="izin_edar" value="<?php echo $data['izin_edar'] ?>" aria-describedby="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="jabatandokter" class="form-label">Golongan Obat</label>
+                            <select class="form-select" name="golongan_obat" id="golongan_obat" aria-label="Default select example">
+                                <option selected>Pilih Golongan</option>
+                                <option value="1">...</option>
+                                <option value="2">...</option>
+                                <option value="3">...</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ketgambar" class="form-label">Keterangan</label>
+                            <input type="" class="form-control" id="ket" value="<?php echo $data['ket'] ?>"  name="ket" aria-describedby="">
+                        </div>
                         <button type="submit" name="save" class="btn btn-primary">Simpan</button>
                         <button type="submit" class="btn btn-primary">Batal</button>
                     </form>
                     <?php
                     if (isset($_POST['save'])) {
-                        $result = mysqli_query($host, "UPDATE produk SET nama_produk = '$_POST[nama_produk]',kategori = '$_POST[kategori_produk]',harga = '$_POST[harga]' WHERE id_produk='$_GET[id_produk]'");
+                        $result = mysqli_query($host, "UPDATE produk SET nama_produk = '$_POST[nama_produk]',kategori = '$_POST[kategori_produk]',harga = '$_POST[harga]',deskripsi = '$_POST[deskripsi]',komposisi = '$_POST[komposisi]',kemasan = '$_POST[kemasan]',manfaat = '$_POST[manfaat]',dosis = '$_POST[dosis]',penyajian = '$_POST[penyajian]', mims = '$_POST[mims]',izin_edar = '$_POST[izin_edar]',golongan_obat = '$_POST[golongan_obat]',ket = '$_POST[ket]' WHERE id_produk='$_GET[id_produk]'");
                         // cek hasil query
                         if (!$result) {
                             die('Query Error : ' . mysqli_errno($host) .

@@ -70,8 +70,12 @@ if (isset($_GET['halaman'])) {
         include 'Proses/editalurpelayanan.php';
     } elseif ($_GET['halaman'] == "tambahprodukapotik") {
         include 'Proses/tambahprodukapotik.php';
+    } elseif ($_GET['halaman'] == "tambahdesproduk") {
+        include 'Proses/tambahdeskripsiproduk.php';
     } elseif ($_GET['halaman'] == "editprodukapotik") {
         include 'Proses/editprodukapotik.php';
+    } elseif ($_GET['halaman'] == "editsejarah") {
+        include 'Proses/tambahsejarah.php';
     }
 } else {
     include 'home.php';

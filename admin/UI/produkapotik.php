@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
     //echo " <script>location:='proses/login.php'</script>";
     header('location:../login.php');
@@ -38,6 +38,16 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
                             $no = 1;
                             $ambil_data = $host->query("SELECT * FROM produk"); ?>
                             <?php while ($data = $ambil_data->fetch_assoc()) {
+                                $deskripsi = $data['deskripsi'];
+                                $komposisi = $data['komposisi'];
+                                $kemasan = $data['kemasan'];
+                                $manfaat = $data['manfaat'];
+                                $dosis = $data['dosis'];
+                                $penyajian = $data['penyajian'];
+                                $standar_mims = $data['mims'];
+                                $izin_edar = $data['izin_edar'];
+                                $golongan_obat = $data['golongan_obat'];
+                                $ket = $data['ket'];
                             ?>
                                 <tr>
                                     <td><?php echo $no ?></td>
@@ -47,16 +57,27 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
                                     <td>
                                         <form method="post" enctype="multipart/form-data">
                                             <input type="text" id="id_produk" name="id_produk" value="<?php echo $data['id_produk'] ?>" hidden>
-
+                                            <?php if ($deskripsi == "" || $komposisi == "" || $kemasan == "" || $manfaat == "" || $dosis == "" || $penyajian == "" || $standar_mims == "" || $izin_edar == "" || $golongan_obat == "" || $ket == "") {
+                                            ?>
+                                                <button class="btn btn-primary mb-1" type="submit" name="deskripsi"><i class="bi bi-window-plus"></i> Lengkapi Data</button>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <button class="btn btn-warning mb-1" type="submit" name="edit"><i class="bi bi-pencil-square"></i></button>
+                                            <?php
+                                            } ?>
                                             <button class="btn btn-danger mb-1" type="submit" name="hapus" onclick="return confirm('Yakin Hapus?')"><i class="bi bi-trash3"></i></button>
-                                            <button class="btn btn-warning mb-1" type="submit" name="edit"><i class="bi bi-pencil-square"></i></button>
+                                            <!-- <button class="btn btn-warning mb-1" type="submit" name="edit"><i class="bi bi-pencil-square"></i></button> -->
 
                                         </form>
                                         <?php
+
                                         if (isset($_POST['hapus'])) {
                                             $host->query("DELETE FROM produk WHERE id_produk = '$_POST[id_produk]'");
                                             echo "<script> location='index.php?halaman=produk'</script>";
                                         } elseif (isset($_POST['edit'])) {
+                                            echo "<script> location='index.php?halaman=editprodukapotik&id_produk=$_POST[id_produk]'</script>";
+                                        } elseif (isset($_POST['deskripsi'])) {
                                             echo "<script> location='index.php?halaman=editprodukapotik&id_produk=$_POST[id_produk]'</script>";
                                         }
 

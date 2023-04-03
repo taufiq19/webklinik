@@ -141,8 +141,8 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
                         </a>
                         <div class="collapse" id="collapselima" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="index.php?halaman=produk">Tambah Produk</a>
-                                <a class="nav-link" href="index.php?halaman=deskripsiproduk">Deskripsi Produk</a>
+                                <a class="nav-link" href="index.php?halaman=produk">Produk</a>
+                                <!-- <a class="nav-link" href="index.php?halaman=tambahdesproduk">Deskripsi Produk</a> -->
                             </nav>
                         </div>
 
