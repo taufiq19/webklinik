@@ -94,31 +94,6 @@ $d = mysqli_fetch_assoc($data);
 </section>
 <!-- Akhir Konsultasi -->
 
-<!-- Float Menu -->
-<div class="floating-icon">
-    <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile&gl=US">
-        <button class="btn-melayang bm-tiga d-flex justify-content-center align-items-center">
-            <span class="span-melayang text-capitalize text-white fs-6">daftar online</span>
-            <i class="bi bi-phone-flip fs-2 text-white fw-bold"></i>
-        </button>
-    </a>
-
-    <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <button class="btn-melayang bm-satu d-flex justify-content-center align-items-center">
-            <span class="span-melayang text-capitalize text-white fs-6">ketersediaan tempat tidur</span>
-            <i class="bi bi-building-check text-white fw-bold fs-2"></i>
-        </button>
-    </a>
-
-    <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <button class="btn-melayang bm-dua d-flex justify-content-center align-items-center">
-            <span class="span-melayang text-capitalize text-white fs-6">antrian terkini</span>
-            <i class="bi bi-people text-white fw-bold fs-2"></i>
-        </button>
-    </a>
-</div>
-<!-- Akhir Float Menu -->
-
 <!-- Hub Kami -->
 <section class="bg-sc py-5">
     <div class="container-lg">
@@ -196,23 +171,3 @@ $d = mysqli_fetch_assoc($data);
     </div>
 </section>
 <!-- Akhir Hub Kami -->
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Perhatian !</h1>
-            </div>
-            <div class="modal-body">
-                Coming Soon . . . . .
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Keluar</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Akhir Modal -->

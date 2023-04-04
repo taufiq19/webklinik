@@ -1,4 +1,4 @@
-<?php  
+<?php
 include('admin/koneksi/konek.php');
 ?>
 <!DOCTYPE html>
@@ -24,10 +24,9 @@ include('admin/koneksi/konek.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 
-<body>
 
-    <!-- Navbar bagian 1  -->
-    <!-- <div class="navbar navbar-expand-lg d-none d-xxl-block d-xl-block d-lg-block d-md-block" id="navbar-header">
+<!-- Navbar bagian 1  -->
+<!-- <div class="navbar navbar-expand-lg d-none d-xxl-block d-xl-block d-lg-block d-md-block" id="navbar-header">
         <div class="container">
             <div class="collapse navbar-collapse justify-content-between">
                 <img class="img-logo-klinik" src="image/LOGO ST KHADIJAH.png" alt="Logo Klinik" data-tilt>
@@ -52,78 +51,78 @@ include('admin/koneksi/konek.php');
         </div>
     </div>
      -->
-    <!-- Akhir Navbar bagian 1 -->
+<!-- Akhir Navbar bagian 1 -->
 
-    <!-- Navbar bagian 2 -->
-    <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top" id="navbar-2">
-        <div class="container-lg cn-navbar-2">
-            <div class="navbar-brand" href="#">
-                <h2 class="title-navbar-klinik navbar2">Klinik Utama</h2>
-                <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3>
+<!-- Navbar bagian 2 -->
+<nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top" id="navbar-2">
+    <div class="container-lg cn-navbar-2">
+        <div class="navbar-brand" href="#">
+            <h2 class="title-navbar-klinik navbar2">Klinik Utama</h2>
+            <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3>
+        </div>
+        <button class="navbar-toggler btn-tgl" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" ria-labelledby="offcanvasNavbarLabel" id="navbarNav">
+            <div class="offcanvas-header shadow-sm">
+                <h5 class="offcanvas-title underline-text" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <button class="navbar-toggler btn-tgl" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" ria-labelledby="offcanvasNavbarLabel" id="navbarNav">
-                <div class="offcanvas-header shadow-sm">
-                    <h5 class="offcanvas-title underline-text" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body txt-navbar-2 text-muted">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 mg-tgl">
-                        <li class="nav-item mg-navbar mb-3 px-2">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item mg-navbar mb-3 px-2">
-                            <a class="nav-link" href="fasilitas/fasilitas.html">Fasilitas</a>
-                        </li>
-                        <li class="nav-item dropdown mb-3 px-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dokter
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="dokter/daftar-dokter.html">Daftar Dokter</a>
-                                </li>
-                                <li><a class="dropdown-item" href="dokter/jadwal-dokter.html">Jadwal Dokter</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown mb-3 px-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Spesialisasi
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-penyakit-dalam.html">Klinik Penyakit
-                                        Dalam</a></li>
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-bedah.html">Klinik Bedah</a></li>
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-anak.html">Klinik Anak</a></li>
-                                <li><a class="dropdown-item" href="spesialisasi/spesialis-obgyn.html">Klinik Obgyn</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown mb-3 px-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Layanan
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="layanan/konsul-apotik.html">Apotik</a></li>
-                                <li><a class="dropdown-item mb-3" href="layanan/lab.html">Laboratorium</a></li>
-                                <li><a class="dropdown-item mb-3" href="layanan/daftar-online.html">Pendaftaran Online</a>
-                                </li>
-                                <li><a class="dropdown-item" href="layanan/mcu-umum.html">Medical Check Up Umum</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown mb-3 px-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tentang
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="tentang/hubungi-kami.html">Hubungi Kami</a></li>
-                                <li><a class="dropdown-item mb-3" href="tentang/profil-klinik.html">Profil Klinik</a></li>
-                                <li><a class="dropdown-item" href="tentang/alur-klinik.html">Alur Klinik</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+            <div class="offcanvas-body txt-navbar-2 text-muted">
+                <ul class="navbar-nav justify-content-end flex-grow-1 mg-tgl">
+                    <li class="nav-item mg-navbar mb-3 px-2">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mg-navbar mb-3 px-2">
+                        <a class="nav-link" href="fasilitas/fasilitas.html">Fasilitas</a>
+                    </li>
+                    <li class="nav-item dropdown mb-3 px-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dokter
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                            <li><a class="dropdown-item mb-3" href="dokter/daftar-dokter.html">Daftar Dokter</a>
+                            </li>
+                            <li><a class="dropdown-item" href="dokter/jadwal-dokter.html">Jadwal Dokter</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-3 px-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Spesialisasi
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                            <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-penyakit-dalam.html">Klinik Penyakit
+                                    Dalam</a></li>
+                            <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-bedah.html">Klinik Bedah</a></li>
+                            <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-anak.html">Klinik Anak</a></li>
+                            <li><a class="dropdown-item" href="spesialisasi/spesialis-obgyn.html">Klinik Obgyn</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-3 px-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Layanan
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                            <li><a class="dropdown-item mb-3" href="layanan/konsul-apotik.html">Apotik</a></li>
+                            <li><a class="dropdown-item mb-3" href="layanan/lab.html">Laboratorium</a></li>
+                            <li><a class="dropdown-item mb-3" href="layanan/daftar-online.html">Pendaftaran Online</a>
+                            </li>
+                            <li><a class="dropdown-item" href="layanan/mcu-umum.html">Medical Check Up Umum</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mb-3 px-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tentang
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                            <li><a class="dropdown-item mb-3" href="tentang/hubungi-kami.html">Hubungi Kami</a></li>
+                            <li><a class="dropdown-item mb-3" href="tentang/profil-klinik.html">Profil Klinik</a></li>
+                            <li><a class="dropdown-item" href="tentang/alur-klinik.html">Alur Klinik</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-    </nav>
-    <!-- Akhir Navbar bagian 2-->
+    </div>
+</nav>
+<!-- Akhir Navbar bagian 2-->

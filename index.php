@@ -8,6 +8,7 @@ if (isset($_GET['halaman'])) {
   } elseif ($_GET['halaman'] == "fasilitas") {
     include 'header2.php';
     include 'UI/fasilitas.php';
+    include 'menufloat.php';
   } elseif ($_GET['halaman'] == "tambahartikel") {
     include 'header2.php';
     include 'Proses/tambahartikel.php';
@@ -19,5 +20,8 @@ if (isset($_GET['halaman'])) {
 ?>
 
 <!-- </div> -->
-<?php include 'footer.php' ?>
+<?php
+include 'footer.php';
+include 'menufloat.php';
+?>
 <!-- <link rel="stylesheet" type="text/css" href=""> -->
