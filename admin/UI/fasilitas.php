@@ -1,3 +1,10 @@
+<?php 
+if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
+    //echo " <script>location:='proses/login.php'</script>";
+    header('location:../login.php');
+    exit();
+}
+?>
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
@@ -66,7 +73,7 @@
                                         <?php
                                         if (isset($_POST['hapus'])) {
                                             $host->query("delete from fasilitas where id_fasilitas = '$_POST[id_fasilitas]'");
-                                            // echo "<script> location='index.php?halaman=fasilitas'</script>";
+                                            echo "<script> location='index.php?halaman=fasilitas'</script>";
                                         } elseif (isset($_POST['edit'])) {
                                             echo "<script> location='index.php?halaman=editfasilitas&id_fasilitas=$_POST[id_fasilitas]'</script>";
                                         }

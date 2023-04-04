@@ -1,3 +1,10 @@
+<?php 
+if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
+    //echo " <script>location:='proses/login.php'</script>";
+    header('location:../login.php');
+    exit();
+}
+?>
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
@@ -7,7 +14,7 @@
             </ol>
 
             <h2 class="accordion-header" id="flush-headingOne">
-                <a href="../Proses/tambahmcu.php"><button type="button" class="btn btn-primary btn-lg mb-4"><i class="bi bi-plus-circle"></i> Tambah Data</button></a>
+                <a href="index.php?halaman=tambahmcu"><button type="button" class="btn btn-primary btn-lg mb-4"><i class="bi bi-plus-circle"></i> Tambah Data</button></a>
             </h2>
 
             <div class="card shadow-sm mb-4">
@@ -27,16 +34,36 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Lengkap Populer</td>
-                                <td>150.000,-00</td>
-                                <td>Pemeriksaan GDS, Pemeriksaan Urin</td>
-                                <td>
-                                    <button class="btn btn-warning" type="submit"><i class="bi bi-pencil-square"></i></button>
-                                    <button class="btn btn-danger" type="submit"><i class="bi bi-trash3"></i></button>
-                                </td>
-                            </tr>
+                            <?php
+                            $no = 1;
+                            $ambil_data = $host->query("select * from mcu"); ?>
+                            <?php while ($data = $ambil_data->fetch_assoc()) { ?>
+                                <tr>
+                                    <td><?php echo $no ?></td>
+                                    <td><?php echo $data['jenis_paket'] ?></td>
+                                    <td><?php echo $data['harga'] ?></td>
+                                    <td><?php echo $data['jenis_pemeriksaan'] ?></td>
+                                    <td>
+                                        <form method="post" enctype="multipart/form-data">
+                                            <input type="text" id="id_mcu" name="id_mcu" value="<?php echo $data['id_mcu'] ?>" hidden>
+
+                                            <button class="btn btn-danger mb-1" type="submit" name="hapus" onclick="return confirm('Yakin Hapus?')"><i class="bi bi-trash3"></i></button>
+                                            <button class="btn btn-warning mb-1" type="submit" name="edit"><i class="bi bi-pencil-square"></i></button>
+
+                                        </form>
+                                        <?php
+                                        if (isset($_POST['hapus'])) {
+                                            $host->query("delete from lab where id_mcu = '$_POST[id_mcu]'");
+                                            echo "<script> location='index.php?halaman=lab'</script>";
+                                        } elseif (isset($_POST['edit'])) {
+                                            echo "<script> location='index.php?halaman=editmcu&id_mcu=$_POST[id_mcu]'</script>";
+                                        }
+
+                                        ?>
+                                    </td>
+                                </tr>
+                            <?php $no++;
+                            } ?>
                         </tbody>
                     </table>
                 </div>

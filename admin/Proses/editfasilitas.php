@@ -1,4 +1,9 @@
 <?php
+if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
+    //echo " <script>location:='proses/login.php'</script>";
+    header('location:../login.php');
+    exit();
+}
 $id_admin = $_SESSION['admin']['id_admin'];
 $ambil = $host->query("select * from fasilitas where id_fasilitas = '$_GET[id_fasilitas]'");
 $data = $ambil->fetch_assoc();
@@ -16,7 +21,7 @@ $data = $ambil->fetch_assoc();
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Tambah Data
+                    Ubah Data
                 </div>
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">
