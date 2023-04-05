@@ -72,19 +72,19 @@ include('admin/koneksi/konek.php');
                 <div class="offcanvas-body txt-navbar-2 text-muted">
                     <ul class="navbar-nav justify-content-end flex-grow-1 mg-tgl">
                         <li class="nav-item mg-navbar mb-3 px-2">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item mg-navbar mb-3 px-2">
-                            <a class="nav-link" href="fasilitas/fasilitas.html">Fasilitas</a>
+                            <a class="nav-link" href="index.php?halaman=fasilitas">Fasilitas</a>
                         </li>
                         <li class="nav-item dropdown mb-3 px-2">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dokter
                             </a>
                             <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="dokter/daftar-dokter.html">Daftar Dokter</a>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=dokter">Daftar Dokter</a>
                                 </li>
-                                <li><a class="dropdown-item" href="dokter/jadwal-dokter.html">Jadwal Dokter</a></li>
+                                <li><a class="dropdown-item" href="index.php?halaman=jadwal-dokter">Jadwal Dokter</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown mb-3 px-2">
@@ -104,7 +104,7 @@ include('admin/koneksi/konek.php');
                                 Layanan
                             </a>
                             <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="layanan/konsul-apotik.html">Apotik</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=produk">Apotik</a></li>
                                 <li><a class="dropdown-item mb-3" href="layanan/lab.html">Laboratorium</a></li>
                                 <li><a class="dropdown-item mb-3" href="layanan/daftar-online.html">Pendaftaran Online</a>
                                 </li>

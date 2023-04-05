@@ -56,7 +56,7 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
                         </div>
                         <div class="mb-3">
                             <label for="waktu" class="form-label">Waktu</label>
-                            <input type="text" name="waktu" class="form-control" id="waktu" aria-describedby="">
+                            <input type="text" name="waktu" placeholder="misal: 07.00 - 09.00" class="form-control" id="waktu" aria-describedby="">
                         </div>
                         <div class="mb-3">
                             <label for="lokasi" class="form-label">Lokasi</label>
