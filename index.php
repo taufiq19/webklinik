@@ -32,4 +32,5 @@ if (isset($_GET['halaman'])) {
 
 <!-- </div> -->
 <?php include 'footer.php' ?>
+<?php include 'menufloat.php' ?>
 <!-- <link rel="stylesheet" type="text/css" href=""> -->

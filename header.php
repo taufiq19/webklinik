@@ -54,11 +54,12 @@ include('admin/koneksi/konek.php');
     </div>
     <!-- Akhir Navbar bagian 1 -->
 
-    <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top" id="navbar-2">
+    <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top"  id="navbar-2">
         <div class="container-lg cn-navbar-2">
-            <div class="navbar-brand" href="#">
-                <h2 class="title-navbar-klinik navbar2">Klinik Utama</h2>
-                <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3>
+            <div class=" navbar-brand" href="index.php">
+                <img src="image/alogo.png" class="img-fluid" style="max-width: 25%;" alt="">
+                <!-- <h2 class="title-navbar-klinik navbar2">Klinik Utama</h2> -->
+                <!-- <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3> -->
             </div>
             <button class="navbar-toggler btn-tgl" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
