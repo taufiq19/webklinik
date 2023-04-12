@@ -1,4 +1,4 @@
-<?php  
+<?php
 include('admin/koneksi/konek.php');
 ?>
 <!DOCTYPE html>
@@ -54,10 +54,10 @@ include('admin/koneksi/konek.php');
     </div>
     <!-- Akhir Navbar bagian 1 -->
 
-    <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top"  id="navbar-2">
+    <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top" id="navbar-2">
         <div class="container-lg cn-navbar-2">
-            <div class=" navbar-brand" href="index.php">
-                <img src="image/alogo.png" class="img-fluid" style="max-width: 25%;" alt="">
+            <div class=" navbar-brand img-logo-brand" href="index.php">
+                <img src="image/alogo.png" class="img-fluid" alt="">
                 <!-- <h2 class="title-navbar-klinik navbar2">Klinik Utama</h2> -->
                 <!-- <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3> -->
             </div>
