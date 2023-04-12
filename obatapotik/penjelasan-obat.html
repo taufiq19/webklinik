@@ -143,9 +143,12 @@
                     <h4 class="text-capitalize fw-bold mb-3">nama obat/barang</h4>
 
                     <div class="crd-penjelasan-obat position-relative mb-3">
-                        <img src="../image/banner/anak.jpg" class="img-penjelasan-obat img-fluid" alt="">
-                        <div class="lens d-none d-lg-block d-xl-block d-xxl-block"></div>
-                        <div class="result d-none d-lg-block d-xl-block d-xxl-block"></div>
+                        <div class="cobacoba" id="img-produk-zoom">
+                            <img src=" ../image/banner/anak.jpg" class="img-penjelasan-obat img-fluid"
+                                style="object-fit: cover;" alt="gambar obat">
+                            <!-- <div class="lens d-none d-lg-block d-xl-block d-xxl-block"></div>
+                        <div class="result d-none d-lg-block d-xl-block d-xxl-block"></div> -->
+                        </div>
                     </div>
 
                     <div class="ket-pen-obat mb-5">
@@ -366,12 +369,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
     <!-- Javascript -->
     <script src="../node_modules/bootstrap/js_saya/script.js"></script>
+    <script src="../node_modules/js-image-zoom/js-image-zoom.js" type="application/javascript"></script>
     <!-- <script src="../node_modules/bootstrap/js_saya/zoomimage.js"></script> -->
     <!-- Bootstrap -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="../node_modules/bootstrap/dist/css/bootstrap.css"></script>
     <!-- Tilt Js -->
     <script type="text/javascript" src="vanilla/vanilla-tilt.js"></script>
+
+    <script>
+        var options = {
+            height: 200,
+            scale: 2.5,
+            offset: { vertical: 0, horizontal: 10 }
+        };
+        new ImageZoom(document.getElementById("img-produk-zoom"), options);
+    </script>
 
 </body>
 
