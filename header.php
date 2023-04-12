@@ -1,4 +1,4 @@
-<?php  
+<?php
 include('admin/koneksi/konek.php');
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,8 @@ include('admin/koneksi/konek.php');
     <div class="navbar navbar-expand-lg d-none d-xxl-block d-xl-block d-lg-block d-md-block" id="navbar-header">
         <div class="container">
             <div class="collapse navbar-collapse justify-content-between">
-                <img class="img-logo-klinik" src="image/LOGO ST KHADIJAH.png" alt="Logo Klinik" data-tilt>
+                <!-- <img class="img-logo-klinik" src="image/LOGO ST KHADIJAH.png" alt="Logo Klinik" data-tilt> -->
+                <div></div>
                 <form class="d-flex" role="search">
                     <input class="form-control form-control-search bg-light shadow-sm" type="search" placeholder="Masukkan Kata Kunci" aria-label="Search">
                 </form>
@@ -54,12 +55,12 @@ include('admin/koneksi/konek.php');
     </div>
     <!-- Akhir Navbar bagian 1 -->
 
-    <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top"  id="navbar-2">
-        <div class="container-lg cn-navbar-2">
-            <div class=" navbar-brand" href="index.php">
-                <img src="image/alogo.png" class="img-fluid" style="max-width: 25%;" alt="">
-                <!-- <h2 class="title-navbar-klinik navbar2">Klinik Utama</h2> -->
-                <!-- <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3> -->
+    <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top" id="navbar-2">
+        <div class="container-lg cn-navbar-2 align-content-center">
+            <div class="navbar-brand img-logo-brand " href="index.php">
+                <img src="image/alogo.png" class="img-fluid" alt="">
+                <!-- <h2 class="title-navbar-klinik navbar2 border">Klinik Utama</h2>
+                <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3> -->
             </div>
             <button class="navbar-toggler btn-tgl" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
