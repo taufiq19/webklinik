@@ -257,31 +257,6 @@
 </section>
 <!-- Akhir Lokasi Klinik -->
 
-<!-- Float Menu -->
-<div class="floating-icon d-none d-sm-block">
-  <a href="layanan/daftar-online.html">
-    <button class="btn-melayang bm-tiga d-flex justify-content-center align-items-center">
-      <span class="span-melayang text-capitalize text-white fs-6">daftar online</span>
-      <i class="bi bi-phone-flip fs-2 text-white fw-bold"></i>
-    </button>
-  </a>
-
-  <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <button class="btn-melayang bm-satu d-flex justify-content-center align-items-center">
-      <span class="span-melayang text-capitalize text-white fs-6">ketersediaan tempat tidur</span>
-      <i class="bi bi-building-check text-white fw-bold fs-2"></i>
-    </button>
-  </a>
-
-  <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <button class="btn-melayang bm-dua d-flex justify-content-center align-items-center">
-      <span class="span-melayang text-capitalize text-white fs-6">antrian terkini</span>
-      <i class="bi bi-people text-white fw-bold fs-2"></i>
-    </button>
-  </a>
-</div>
-<!-- Akhir Float Menu -->
-
 <!-- Hub Kami -->
 <section class="bg-sc py-5">
   <div class="container-lg">
