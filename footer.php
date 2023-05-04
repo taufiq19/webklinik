@@ -1,3 +1,81 @@
+<!-- Hub Kami -->
+<section class="bg-sc py-5">
+    <div class="container-lg">
+        <div class="row justify-content-center ">
+            <div class="row">
+                <div class="col">
+                    <h1 class="fw-bold text-capitalize text-center mb-4">Hubungi Kami</h1>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 my-2" data-aos="zoom-in-down" data-aos-duration="1000">
+                <a href="tel:0421-21313">
+                    <div class="card crd-hub hub-gerak bg-cs border-0">
+                        <img src="image/hub kami/callcenter.jpg" class="card-img img-ukuran rounded-0 shadow" alt="Gambar Call Center">
+                        <div class="card-img-overlay pt-hub text-hub txt-ctc txt-sd">
+                            <h2 class="card-title fw-semibold fs-4">Klik Disini Untuk Telepon !</h5>
+                                <h1 class="fw-semibold fs-1">(0421) 21313</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 my-2" data-aos="zoom-in-down" data-aos-duration="1000">
+                <a href="https://wa.me/6285256953133">
+                    <div class="card crd-hub hub-gerak bg-wa border-0">
+                        <img src="image/hub kami/whatsapp.jpg" class="card-img img-ukuran rounded-0 shadow" alt="Gambar Call Center">
+                        <div class=" card-img-overlay pt-hub text-hub txt-ctc txt-sd">
+                            <h2 class="card-title fw-semibold bg-txt fs-4">Klik Disini Untuk Whatsapp !</h5>
+                                <h1 class="fw-semibold fs-1">+6285256953133</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <hr class="garis-hub">
+        <div class="row text-center">
+            <div class="col-md-4 my-2">
+                <h4 class="fw-bold">KU-ST KHADIJAH</h4>
+                <br>
+                <br>
+                <h6>Jl. Pettana Rajeng No.5</h6>
+                <br>
+                <h6>Telp (0421) 21313</h6>
+                <br>
+                <h6>Email : st.khadijahpare2@gmail.com</h6>
+                <br>
+                <h6 class="mb-4">Kota Parepare</h6>
+            </div>
+            <div class="col-md-4 my-2">
+                <h4 class="fw-bold">JAM OPERASIONAL KLINIK</h4>
+                <br>
+                <br>
+                <h6>Senin (08.00 - 18.00)</h6>
+                <br>
+                <h6>Selasa (08.00 - 18.00)</h6>
+                <br>
+                <h6>Rabu (08.00 - 18.00)</h6>
+                <br>
+                <h6>Kamis (08.00 - 18.00)</h6>
+                <br>
+                <h6>Jumat (08.00 - 18.00)</h6>
+                <br>
+                <h6>Sabtu (08.00 - 18.00)</h6>
+                <br>
+                <h6 class="mb-4">Ahad & Hari Besar (Libur)</h6>
+            </div>
+            <div class="col-md-4 my-2">
+                <h4 class="fw-bold">JAM BESUK PASIEN</h4>
+                <br>
+                <br>
+                <h6>Pagi Hari Pukul 10.00 - 13.00 Siang</h6>
+                <br>
+                <h6>Sore Hari Pukul 17.00 - 21.00 Malam</h6>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Akhir Hub Kami -->
 <!-- Footer -->
 <footer class="bg-ft align-items-center py-3">
     <div class="card-footer text-muted text-center">
