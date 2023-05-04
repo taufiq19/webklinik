@@ -30,7 +30,7 @@ include('admin/koneksi/konek.php');
     <div class="navbar navbar-expand-lg d-none d-xxl-block d-xl-block d-lg-block d-md-block" id="navbar-header">
         <div class="container">
             <div class="collapse navbar-collapse justify-content-between">
-                <img class="img-logo-klinik" src="image/LOGO ST KHADIJAH.png" alt="Logo Klinik" data-tilt>
+                <img class="img-logo-klinik" src="image/LOGO ST KHADIJAH.png" style="opacity: 0;" alt="Logo Klinik" data-tilt>
                 <form class="d-flex" role="search">
                     <input class="form-control form-control-search bg-light shadow-sm" type="search" placeholder="Masukkan Kata Kunci" aria-label="Search">
                 </form>
