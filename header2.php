@@ -1,4 +1,4 @@
-<?php
+<?php  
 include('admin/koneksi/konek.php');
 ?>
 <!DOCTYPE html>
@@ -57,8 +57,8 @@ include('admin/koneksi/konek.php');
     <!-- Navbar bagian 2 -->
     <nav class="navbar navbar-expand-lg align-items-center shadow-sm bg-trasnparent sticky-top" id="navbar-2">
         <div class="container-lg cn-navbar-2">
-            <div class="navbar-brand img-logo-brand" href="index.php">
-                <img src="image/alogo.png" class="img-fluid" alt="logo-klinik">
+        <div class=" navbar-brand img-logo-brand" href="index.php">
+                <img src="image/alogo.png" class="img-fluid"  alt="logo-klinik">
                 <!-- <h2 class="title-navbar-klinik navbar2">Klinik Utama</h2> -->
                 <!-- <h3 class="title-navbar-sitti navbar2">Sitti Khadijah</h3> -->
             </div>
@@ -66,7 +66,7 @@ include('admin/koneksi/konek.php');
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" ria-labelledby="offcanvasNavbarLabel" id="navbarNav">
-                <div class="offcanvas-header shadow-sm">
+                   <div class="offcanvas-header shadow-sm">
                     <h5 class="offcanvas-title underline-text" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -93,11 +93,11 @@ include('admin/koneksi/konek.php');
                                 Spesialisasi
                             </a>
                             <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-penyakit-dalam.html">Klinik Penyakit
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=spdalam">Klinik Penyakit
                                         Dalam</a></li>
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-bedah.html">Klinik Bedah</a></li>
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-anak.html">Klinik Anak</a></li>
-                                <li><a class="dropdown-item" href="spesialisasi/spesialis-obgyn.html">Klinik Obgyn</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=spbedah">Klinik Bedah</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=spanak">Klinik Anak</a></li>
+                                <li><a class="dropdown-item" href="index.php?halaman=spobgyn">Klinik Obgyn</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown mb-3 px-2">

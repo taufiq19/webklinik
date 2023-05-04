@@ -23,6 +23,18 @@ if (isset($_GET['halaman'])) {
   } elseif ($_GET['halaman'] == "tambahartikel") {
     include 'header2.php';
     include 'Proses/tambahartikel.php';
+  } elseif ($_GET['halaman'] == "spdalam") {
+    include 'header2.php';
+    include 'spesialisasi/sp-dalam.php';
+  } elseif ($_GET['halaman'] == "spanak") {
+    include 'header2.php';
+    include 'spesialisasi/sp-anak.php';
+  } elseif ($_GET['halaman'] == "spbedah") {
+    include 'header2.php';
+    include 'spesialisasi/sp-bedah.php';
+  } elseif ($_GET['halaman'] == "spobgyn") {
+    include 'header2.php';
+    include 'spesialisasi/sp-obgyn.php';
   }
 } else {
   include 'header.php';

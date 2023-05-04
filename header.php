@@ -92,11 +92,11 @@ include('admin/koneksi/konek.php');
                                 Spesialisasi
                             </a>
                             <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-penyakit-dalam.html">Klinik Penyakit
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=spdalam">Klinik Penyakit
                                         Dalam</a></li>
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-bedah.html">Klinik Bedah</a></li>
-                                <li><a class="dropdown-item mb-3" href="spesialisasi/spesialis-anak.html">Klinik Anak</a></li>
-                                <li><a class="dropdown-item" href="spesialisasi/spesialis-obgyn.html">Klinik Obgyn</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=spbedah">Klinik Bedah</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=spanak">Klinik Anak</a></li>
+                                <li><a class="dropdown-item" href="index.php?halaman=spobgyn">Klinik Obgyn</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown mb-3 px-2">
