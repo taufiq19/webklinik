@@ -28,6 +28,15 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
 
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/22.0.0/classic/ckeditor.js"></script>
+    <script type="text/javascript">
+        function CekLokasi(val) {
+            var element = document.getElementById('lokasi');
+            if (val == 'pick a location' || val == 'lainnya')
+                element.style.display = 'block';
+            else
+                element.style.display = 'none';
+        }
+    </script>
 
 </head>
 

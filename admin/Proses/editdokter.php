@@ -41,7 +41,10 @@ $data = $ambil->fetch_assoc();
                                 <option selected>-- PILIH JABATAN --</option>
                                 <option value="Dokter Umum" <?= $data['jabatan'] == 'Dokter Umum' ? ' selected="selected"' : ''; ?>>Dokter Umum</option>
                                 <option value="Dokter Paruh Waktu" <?= $data['jabatan'] == 'Dokter Paruh Waktu' ? ' selected="selected"' : ''; ?>>Dokter Paruh Waktu</option>
-                                <option value="Dokter Spesialis" <?= $data['jabatan'] == 'Dokter Spesialis' ? ' selected="selected"' : ''; ?>>Dokter Spesialis</option>
+                                <option value="Dokter Spesialis Penyakit Dalam" <?= $data['jabatan'] == 'Dokter Spesialis Penyakit Dalam' ? ' selected="selected"' : ''; ?>>Dokter Spesialis Penyakit Dalam</option>
+                                <option value="Dokter Spesialis Anak" <?= $data['jabatan'] == 'Dokter Spesialis Anak' ? ' selected="selected"' : ''; ?>>Dokter Spesialis Anak</option>
+                                <option value="Dokter Spesialis Bedah" <?= $data['jabatan'] == 'Dokter Spesialis Bedah' ? ' selected="selected"' : ''; ?>>Dokter Spesialis Bedah</option>
+                                <option value="Dokter Spesialis Obgyn" <?= $data['jabatan'] == 'Dokter Spesialis Obgyn' ? ' selected="selected"' : ''; ?>>Dokter Spesialis Obgyn</option>
                             </select>
                         </div>
                         <button type="submit" name="save" class="btn btn-primary">Simpan</button>

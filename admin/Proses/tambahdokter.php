@@ -37,7 +37,10 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
                                 <option selected>-- PILIH JABATAN --</option>
                                 <option value="Dokter Umum">Dokter Umum</option>
                                 <option value="Dokter Paruh Waktu">Dokter Paruh Waktu</option>
-                                <option value="Dokter Spesialis">Dokter Spesialis</option>
+                                <option value="Dokter Spesialis Penyakit Dalam">Dokter Spesialis Penyakit Dalam</option>
+                                <option value="Dokter Spesialis Bedah">Dokter Spesialis Bedah</option>
+                                <option value="Dokter Spesialis Anak">Dokter Spesialis Anak</option>
+                                <option value="Dokter Spesialis Obgyn">Dokter Spesialis Obgyn</option>
                             </select>
                         </div>
                         <button type="submit" name="save" class="btn btn-primary">Simpan</button>

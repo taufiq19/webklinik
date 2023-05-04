@@ -72,11 +72,19 @@ $data = $ambil_data->fetch_assoc();
                         </div>
                         <div class="mb-3">
                             <label for="lokasi" class="form-label">Lokasi</label>
-                            <select class="form-select" name="lokasi" id="lokasi" aria-label="Default select example">
+                            <select class="form-select mb-2" name="lokasi" id="" onchange="CekLokasi(this.value);" aria-label="Default select example">
                                 <option selected>Pilih Lokasi</option>
                                 <option value="1" <?= $data['lokasi'] == '1' ? ' selected="selected"' : ''; ?>>Klinik Utama Sitti Khadijah Parepare</option>
-                                <option value="2" <?= $data['lokasi'] == '2' ? ' selected="selected"' : ''; ?>>Lainnya</option>
+                                <option value="lainnya" <?= $data['lokasi'] != 'Klinik Utama Sitti Khadijah Parepare' ? ' selected="selected"' : ''; ?>>Lainnya</option>
                             </select>
+                            <?php if ($data['lokasi'] != 'Klinik Utama Sitti Khadijah Parepare') {
+                            ?>
+                                <input type="text" name="lokasi" value="<?php echo $data['lokasi'] ?>" placeholder="Input Lokasi" class="form-control" id="lokasi" aria-describedby="">
+
+                            <?php
+                            } ?>
+                            <input type="text" name="lokasi" style='display:none;' placeholder="Input Lokasi" class="form-control" id="lokasi" aria-describedby="">
+
                         </div>
                         <div class="mb-3">
                             <label for="ketgambar" class="form-label">Keterangan</label>

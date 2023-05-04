@@ -60,11 +60,12 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
                         </div>
                         <div class="mb-3">
                             <label for="lokasi" class="form-label">Lokasi</label>
-                            <select class="form-select" name="lokasi" id="lokasi" aria-label="Default select example">
+                            <select class="form-select mb-2" name="lokasi" onchange="CekLokasi(this.value);" aria-label="Default select example">
                                 <option selected>Pilih Lokasi</option>
-                                <option value="1">Klinik Utama Sitti Khadijah Parepare</option>
-                                <option value="2">Lainnya</option>
+                                <option value="Klinik Utama Sitti Khadijah Parepare">Klinik Utama Sitti Khadijah Parepare</option>
+                                <option value="lainnya">Lainnya</option>
                             </select>
+                            <input type="text" name="lokasi" style='display:none;' placeholder="Input Lokasi" class="form-control" id="lokasi" aria-describedby="">
                         </div>
                         <div class="mb-3">
                             <label for="ketgambar" class="form-label">Keterangan</label>
