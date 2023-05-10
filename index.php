@@ -35,6 +35,9 @@ if (isset($_GET['halaman'])) {
   } elseif ($_GET['halaman'] == "spobgyn") {
     include 'header2.php';
     include 'spesialisasi/sp-obgyn.php';
+  } elseif ($_GET['halaman'] == "mcu-umum") {
+    include 'header2.php';
+    include 'layanan/mcu-umum.php';
   }
 } else {
   include 'header.php';

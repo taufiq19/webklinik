@@ -32,7 +32,7 @@ include('admin/koneksi/konek.php');
             <div class="collapse navbar-collapse justify-content-between">
                 <img class="img-logo-klinik" src="image/LOGO ST KHADIJAH.png" style="opacity: 0;" alt="Logo Klinik" data-tilt>
                 <form class="d-flex" role="search">
-                    <input class="form-control form-control-search bg-light shadow-sm" type="search" placeholder="Masukkan Kata Kunci" aria-label="Search">
+                    <input class="form-control form-control-search bg-light shadow-sm" type="search" name="cari" id="cari" placeholder="Masukkan Kata Kunci" aria-label="Search">
                 </form>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -108,7 +108,7 @@ include('admin/koneksi/konek.php');
                                 <li><a class="dropdown-item mb-3" href="layanan/lab.html">Laboratorium</a></li>
                                 <li><a class="dropdown-item mb-3" href="layanan/daftar-online.html">Pendaftaran Online</a>
                                 </li>
-                                <li><a class="dropdown-item" href="layanan/mcu-umum.html">Medical Check Up Umum</a></li>
+                                <li><a class="dropdown-item" href="index.php?halaman=mcu-umum">Medical Check Up Umum</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown mb-3 px-2">
