@@ -110,7 +110,7 @@ include('admin/koneksi/konek.php');
                                 <li><a class="dropdown-item mb-3" href="layanan/lab.html">Laboratorium</a></li>
                                 <li><a class="dropdown-item mb-3" href="layanan/daftar-online.html">Pendaftaran Online</a>
                                 </li>
-                                <li><a class="dropdown-item" href="layanan/mcu-umum.html">Medical Check Up Umum</a></li>
+                                <li><a class="dropdown-item" href="index.php?halaman=mcu-umum">Medical Check Up Umum</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown mb-3 px-2">
