@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
     //echo " <script>location:='proses/login.php'</script>";
     header('location:../login.php');
@@ -30,17 +30,37 @@ if (!isset($_SESSION['admin']) or empty($_SESSION['admin'])) {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1</th>
-                                <th>Irfan Surya</th>
-                                <th>ssirfan8@gmail.com</th>
-                                <th>089654311976</th>
-                                <th>Tidak Usah Cari Muka</th>
-                                <td>
-                                    <button class="btn btn-warning" type="submit"><i class="bi bi-pencil-square"></i></button>
-                                    <button class="btn btn-danger" type="submit"><i class="bi bi-trash3"></i></button>
-                                </td>
-                            </tr>
+                            <?php
+                            $no = 1;
+                            $ambil_data = $host->query("SELECT * FROM kritiksaran ORDER BY waktu ASC"); ?>
+                            <?php while ($data = $ambil_data->fetch_assoc()) {
+                            ?>
+                                <tr>
+                                    <th><?php echo $no ?></th>
+                                    <th><?php echo $data['nama'] ?></th>
+                                    <th><?php echo $data['email'] ?></th>
+                                    <th><?php echo $data['whatsapp'] ?></th>
+                                    <th><?php echo $data['pesan'] ?></th>
+
+                                    <td>
+                                        <form method="post" enctype="multipart/form-data">
+                                            <input type="text" id="id_kritik" name="id_kritik" value="<?php echo $data['id_kritik'] ?>" hidden>
+
+                                            <button class="btn btn-danger mb-1" type="submit" name="sussu" onclick="return confirm('Yakin Hapus?')"><i class="bi bi-trash3"></i></button>
+
+                                        </form>
+                                        <?php
+                                        if (isset($_POST['sussu'])) {
+                                            $host->query("delete from kritiksaran where id_kritik = '$_POST[id_kritik]'");
+                                            echo "<script> location='index.php?halaman=kritik'</script>";
+                                        } 
+
+                                        ?>
+                                    </td>
+                                </tr>
+                            <?php
+                                $no++;
+                            } ?>
                         </tbody>
                     </table>
                 </div>

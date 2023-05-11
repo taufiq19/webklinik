@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="../image/LOGO ST KHADIJAH.png" />
+    <title>Klinik Utama Sitti Khadijah</title>
+    <!-- Link Aos -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <!-- Link Css -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/Css_Saya/stye.css" />
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Link Bootsrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- Navbar bagian 2 -->
+    <nav class="navbar navbar-expand-lg shadow-sm bg-trasnparent sticky-top " id="navbar-2">
+        <div class="container-lg cn-navbar-2">
+            <a class="navbar-brand" href="#">
+                <h2 class="title-navbar-klinik">Klinik Utama</h2>
+                <h3 class="title-navbar-sitti">Sitti Khadijah</h3>
+            </a>
+            <button class="navbar-toggler btn-tgl" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end " tabindex="-1" ria-labelledby="offcanvasNavbarLabel" id="navbarNav">
+                <div class="offcanvas-header shadow-sm">
+                    <h5 class="offcanvas-title underline-text" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body txt-navbar-2 text-muted">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 mg-tgl">
+                        <li class="nav-item mg-navbar mb-3 px-2">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item mg-navbar mb-3 px-2">
+                            <a class="nav-link" href="../fasilitas/fasilitas.html">Fasilitas</a>
+                        </li>
+                        <li class="nav-item dropdown mb-3 px-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dokter
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                                <li><a class="dropdown-item mb-3" href="../dokter/daftar-dokter.html">Daftar Dokter</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../dokter/jadwal-dokter.html">Jadwal Dokter</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown mb-3 px-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Spesialisasi
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                                <li><a class="dropdown-item mb-3"
+                                        href="../spesialisasi/spesialis-penyakit-dalam.html">Klinik Penyakit
+                                        Dalam</a></li>
+                                <li><a class="dropdown-item mb-3" href="../spesialisasi/spesialis-bedah.html">Klinik
+                                        Bedah</a></li>
+                                <li><a class="dropdown-item mb-3" href="../spesialisasi/spesialis-anak.html">Klinik
+                                        Anak</a></li>
+                                <li><a class="dropdown-item" href="../spesialisasi/spesialis-obgyn.html">Klinik
+                                        Obgyn</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown mb-3 px-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Layanan
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                                <li><a class="dropdown-item mb-3" href="../layanan/konsul-apotik.html">Apotik</a></li>
+                                <li><a class="dropdown-item mb-3" href="../layanan/lab.html">Laboratorium</a></li>
+                                <li><a class="dropdown-item mb-3" href="../layanan/daftar-online.html">Pendaftaran
+                                        Online</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../layanan/mcu-umum.html">Medical Check Up Umum</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown mb-3 px-2">
+                            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Tentang
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow txt-navbar-2">
+                                <li><a class="dropdown-item mb-3" href="../tentang/hubungi-kami.html">Hubungi Kami</a>
+                                </li>
+                                <li><a class="dropdown-item mb-3" href="../tentang/profil-klinik.html">Profil Klinik</a>
+                                </li>
+                                <li><a class="dropdown-item active" href="../tentang/alur-klinik.html">Alur Klinik</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Akhir Navbar bagian 2-->
+
+    <!-- Hiasan -->
+    <section class="hiasan-tentang">
+    </section>
+    <!-- Akhir Hiasan -->
+
+    <!-- Tombol Alur Pelayanan -->
+    <section class="py-5 mb-2">
+        <div class="container-lg">
+
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h1 class="fw-bold text-uppercase">Alur Pelayanan</h1>
+                    <h4 class="fw-bold text-uppercase">Klinik Utama Sitti Khadijah</h4>
+                </div>
+            </div>
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators tbl-alur">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="row rw-alurklinik justify-content-center">
+                            <div class="col-lg-3 col-md-3 col-12 ">
+                                <a href="#pendaftaran_pasien_baru" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>pendaftaran pasien baru</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <a href="#pendaftaran_pasien_lama" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>pendaftaran pasien lama</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <a href="#poliklinik" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>Poliklinik</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <a href="#apotik" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>apotik</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="row rw-alurklinik justify-content-center">
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>2</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>4</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <a href="#" class="text-decoration-none">
+                                    <div class="tmbl-alur-pelayanan mb-3">
+                                        <p>5</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Akhir Tombol Alur Pelayanan -->
+
+    <!-- Isi Alur Pelayanan -->
+    <section class="py-5">
+        <div class="container-lg">
+            <div class="row justify-content-center mb-3">
+                <div class="col-lg-12 col-md-11 col-12 scroll-spacing" id="pendaftaran_pasien_baru">
+                    <span><i class="bi bi-people fs-2 fst-normal fw-bold text-black"> Pendaftaran Pasien Baru</i></span>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-12 col-md-11 col-12">
+                    <div class="accordion accordion-flush">
+                        <div class="accordion-item bd-acd-tentang">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#alur-bagan-satu" aria-expanded="false"
+                                    aria-controls="alur-bagan-satu">
+                                    Bagan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="alur-bagan-satu" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-bagan-One" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <img src="../image/tentang/bagan.jpg" alt="Gambar Bagan Alur Klinik">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading-penjelasan-one">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#penjelasan-alur-satu" aria-expanded="false"
+                                    aria-controls="penjelasan-alur-satu">
+                                    Penjelasan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="penjelasan-alur-satu" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-penjelasan-one" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row rw-penjelasanalur text-center">
+                                        <div class="col">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora
+                                                praesentium est deserunt veritatis. Ducimus aliquid odit ullam suscipit
+                                                ea,
+                                                in enim, illum qui natus sint iure ut ipsum. Ratione tenetur sed numquam
+                                                harum, accusantium assumenda facere recusandae saepe dicta delectus
+                                                consequatur odio reprehenderit commodi, velit, praesentium eligendi qui
+                                                tempora.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="d-none d-lg-block d-xl-block d-xxl-block">
+
+            <div class="row justify-content-center mb-3">
+                <div class="col col-lg-12 col-md-11 col-12 scroll-spacing">
+                    <i class="bi bi-person-check fs-2 fst-normal fw-bold text-black" id="pendaftaran_pasien_lama">
+                        Pendaftaran Pasien Lama</i>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col col-lg-12 col-md-11 col-12">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item bd-acd-tentang">
+                            <h2 class="accordion-header" id="flush-heading-bagan-two">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#alur-bagan-dua" aria-expanded="false"
+                                    aria-controls="alur-bagan-dua">
+                                    Bagan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="alur-bagan-dua" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-bagan-two" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <img src="../image/tentang/bagan.jpg" alt="Gambar Bagan Alur Klinik">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading-penjelasan-two">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#penjelasan-alur-dua" aria-expanded="false"
+                                    aria-controls="penjelasan-alur-dua">
+                                    Penjelasan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="penjelasan-alur-dua" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-penjelasan-two" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row rw-penjelasanalur text-center">
+                                        <div class="col">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora
+                                                praesentium est deserunt veritatis. Ducimus aliquid odit ullam suscipit
+                                                ea,
+                                                in enim, illum qui natus sint iure ut ipsum. Ratione tenetur sed numquam
+                                                harum, accusantium assumenda facere recusandae saepe dicta delectus
+                                                consequatur odio reprehenderit commodi, velit, praesentium eligendi qui
+                                                tempora.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="d-none d-lg-block d-xl-block d-xxl-block">
+
+            <div class="row justify-content-center mb-3">
+                <div class="col col-lg-12 col-md-11 col-12 scroll-spacing">
+                    <i class="bi bi-file-medical fs-2 fst-normal fw-bold text-black" id="poliklinik"> Poliklinik</i>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col col-lg-12 col-md-11 col-12">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item bd-acd-tentang">
+                            <h2 class="accordion-header" id="flush-heading-bagan-three">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#alur-bagan-tiga" aria-expanded="false"
+                                    aria-controls="alur-bagan-tiga">
+                                    Bagan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="alur-bagan-tiga" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-bagan-three" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <img src="../image/tentang/bagan.jpg" alt="Gambar Bagan Alur Klinik">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading-penjelasan-three">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#penjelasan-alur-tiga" aria-expanded="false"
+                                    aria-controls="penjelasan-alur-tiga">
+                                    Penjelasan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="penjelasan-alur-tiga" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-penjelasan-three"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row rw-penjelasanalur text-center">
+                                        <div class="col">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora
+                                                praesentium est deserunt veritatis. Ducimus aliquid odit ullam suscipit
+                                                ea,
+                                                in enim, illum qui natus sint iure ut ipsum. Ratione tenetur sed numquam
+                                                harum, accusantium assumenda facere recusandae saepe dicta delectus
+                                                consequatur odio reprehenderit commodi, velit, praesentium eligendi qui
+                                                tempora.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="d-none d-lg-block d-xl-block d-xxl-block">
+
+            <div class="row justify-content-center mb-3">
+                <div class="col col-lg-12 col-md-11 col-12 scroll-spacing">
+                    <i class="bi bi-hospital fs-2 fst-normal fw-bold text-black" id="apotik"> Apotik</i>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col col-lg-12 col-md-11 col-12">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item bd-acd-tentang">
+                            <h2 class="accordion-header" id="flush-heading-bagan-four">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#alur-bagan-empat" aria-expanded="false"
+                                    aria-controls="alur-bagan-empat">
+                                    Bagan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="alur-bagan-empat" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-bagan-four" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <img src="../image/tentang/bagan.jpg" alt="Gambar Bagan Alur Klinik">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading-penjelasan-four">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#penjelasan-alur-empat" aria-expanded="false"
+                                    aria-controls="penjelasan-alur-empat">
+                                    Penjelasan Alur Pendaftaran
+                                </button>
+                            </h2>
+                            <div id="penjelasan-alur-empat" class="accordion-collapse collapse"
+                                aria-labelledby="flush-heading-penjelasan-four" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row rw-penjelasanalur text-center">
+                                        <div class="col">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora
+                                                praesentium est deserunt veritatis. Ducimus aliquid odit ullam suscipit
+                                                ea,
+                                                in enim, illum qui natus sint iure ut ipsum. Ratione tenetur sed numquam
+                                                harum, accusantium assumenda facere recusandae saepe dicta delectus
+                                                consequatur odio reprehenderit commodi, velit, praesentium eligendi qui
+                                                tempora.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Isi Alur Pelayanan -->
+
+    <!-- Float Menu -->
+    <div class="floating-icon">
+        <a href="../layanan/daftar-online.html">
+            <button class="btn-melayang bm-tiga d-flex justify-content-center align-items-center">
+                <span class="span-melayang text-capitalize text-white fs-6">daftar online</span>
+                <i class="bi bi-phone-flip fs-2 text-white fw-bold"></i>
+            </button>
+        </a>
+
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button class="btn-melayang bm-satu d-flex justify-content-center align-items-center">
+                <span class="span-melayang text-capitalize text-white fs-6">ketersediaan tempat tidur</span>
+                <i class="bi bi-building-check text-white fw-bold fs-2"></i>
+            </button>
+        </a>
+
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button class="btn-melayang bm-dua d-flex justify-content-center align-items-center">
+                <span class="span-melayang text-capitalize text-white fs-6">antrian terkini</span>
+                <i class="bi bi-people text-white fw-bold fs-2"></i>
+            </button>
+        </a>
+    </div>
+    <!-- Akhir Float Menu -->
+
+    <!-- Hub Kami -->
+    <section class="bg-sc py-5">
+        <div class="container-lg">
+            <div class="row justify-content-center ">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="fw-bold text-capitalize text-center mb-4">Hubungi Kami</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 my-2" data-aos="zoom-in-down" data-aos-duration="1000">
+                    <a href="tel:0421-21313">
+                        <div class="card crd-hub hub-gerak bg-cs border-0">
+                            <img src="../image/hub kami/callcenter.jpg" class="card-img img-ukuran rounded-0 shadow"
+                                alt="Gambar Call Center">
+                            <div class="card-img-overlay pt-hub text-hub txt-ctc txt-sd">
+                                <h2 class="card-title fw-semibold fs-4">Klik Disini Untuk Telepon !</h5>
+                                    <h1 class="fw-semibold fs-1">(0421) 21313</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 my-2" data-aos="zoom-in-down" data-aos-duration="1000">
+                    <a href="https://wa.me/6285256953133">
+                        <div class="card crd-hub hub-gerak bg-wa border-0">
+                            <img src="../image/hub kami/whatsapp.jpg" class="card-img img-ukuran rounded-0 shadow"
+                                alt="Gambar Call Center">
+                            <div class=" card-img-overlay pt-hub text-hub txt-ctc txt-sd">
+                                <h2 class="card-title fw-semibold bg-txt fs-4">Klik Disini Untuk Whatsapp !</h5>
+                                    <h1 class="fw-semibold fs-1">+6285256953133</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="row text-center">
+                <div class="col-md-4 my-2">
+                    <h4 class="fw-bold">KU-ST KHADIJAH</h4>
+                    <br>
+                    <br>
+                    <h6>Jl. Pettana Rajeng No.5</h6>
+                    <br>
+                    <h6>Telp (0421) 21313</h6>
+                    <br>
+                    <h6>Email : st.khadijahpare2@gmail.com</h6>
+                    <br>
+                    <h6 class="mb-4">Kota Parepare</h6>
+                </div>
+                <div class="col-md-4 my-2">
+                    <h4 class="fw-bold">JAM OPERASIONAL KLINIK</h4>
+                    <br>
+                    <br>
+                    <h6>Senin (08.00 - 18.00)</h6>
+                    <br>
+                    <h6>Selasa (08.00 - 18.00)</h6>
+                    <br>
+                    <h6>Rabu (08.00 - 18.00)</h6>
+                    <br>
+                    <h6>Kamis (08.00 - 18.00)</h6>
+                    <br>
+                    <h6>Jumat (08.00 - 18.00)</h6>
+                    <br>
+                    <h6>Sabtu (08.00 - 18.00)</h6>
+                    <br>
+                    <h6 class="mb-4">Ahad & Hari Besar (Libur)</h6>
+                </div>
+                <div class="col-md-4 my-2">
+                    <h4 class="fw-bold">JAM BESUK PASIEN</h4>
+                    <br>
+                    <br>
+                    <h6>Pagi Hari Pukul 10.00 - 13.00 Siang</h6>
+                    <br>
+                    <h6>Sore Hari Pukul 17.00 - 21.00 Malam</h6>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Hub Kami -->
+
+    <!-- Footer -->
+    <footer class="bg-ft align-items-center py-3">
+        <div class="card-footer text-muted text-center">
+            <a class="pe-4 fs-4" href="tel:0421-21313"><i class="bi bi-telephone"></i></a>
+            <a class="pe-4 fs-4" href="Https://t.me/klinikstkhadijahpare"><i class="bi bi-telegram"></i></a>
+            <a class="pe-4 fs-4" href="https://wa.me/6285256953133"><i class="bi bi-whatsapp"></i></a>
+        </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Perhatian !</h1>
+                </div>
+                <div class="modal-body">
+                    Coming Soon . . . . .
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Keluar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal -->
+
+    <!-- AOS -->
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <script src="../node_modules/aos/dist/aos.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <!-- Javascript -->
+    <script src="../node_modules/bootstrap/js_saya/script.js"></script>
+    <!-- Bootsrap -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/bootstrap/dist/css/bootstrap.css"></script>
+
+</body>
+
+</html>

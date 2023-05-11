@@ -107,8 +107,8 @@ include('admin/koneksi/konek.php');
                             </a>
                             <ul class="dropdown-menu border-0 shadow txt-navbar-2">
                                 <li><a class="dropdown-item mb-3" href="index.php?halaman=produk">Apotik</a></li>
-                                <li><a class="dropdown-item mb-3" href="layanan/lab.html">Laboratorium</a></li>
-                                <li><a class="dropdown-item mb-3" href="layanan/daftar-online.html">Pendaftaran Online</a>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=lab">Laboratorium</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=po">Pendaftaran Online</a>
                                 </li>
                                 <li><a class="dropdown-item" href="index.php?halaman=mcu-umum">Medical Check Up Umum</a></li>
                             </ul>
@@ -118,8 +118,8 @@ include('admin/koneksi/konek.php');
                                 Tentang
                             </a>
                             <ul class="dropdown-menu border-0 shadow txt-navbar-2">
-                                <li><a class="dropdown-item mb-3" href="tentang/hubungi-kami.html">Hubungi Kami</a></li>
-                                <li><a class="dropdown-item mb-3" href="tentang/profil-klinik.html">Profil Klinik</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=hub-kami">Hubungi Kami</a></li>
+                                <li><a class="dropdown-item mb-3" href="index.php?halaman=profile">Profil Klinik</a></li>
                                 <li><a class="dropdown-item" href="tentang/alur-klinik.html">Alur Klinik</a></li>
                             </ul>
                         </li>

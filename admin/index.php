@@ -76,6 +76,10 @@ if (isset($_GET['halaman'])) {
         include 'Proses/editprodukapotik.php';
     } elseif ($_GET['halaman'] == "editsejarah") {
         include 'Proses/tambahsejarah.php';
+    } elseif ($_GET['halaman'] == "tambahpertanyaanlab") {
+        include 'Proses/tambahplab.php';
+    }elseif ($_GET['halaman'] == "editplab") {
+        include 'Proses/editplab.php';
     }
 } else {
     include 'home.php';

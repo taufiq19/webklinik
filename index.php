@@ -38,6 +38,18 @@ if (isset($_GET['halaman'])) {
   } elseif ($_GET['halaman'] == "mcu-umum") {
     include 'header2.php';
     include 'layanan/mcu-umum.php';
+  } elseif ($_GET['halaman'] == "lab") {
+    include 'header2.php';
+    include 'layanan/lab.php';
+  } elseif ($_GET['halaman'] == "po") {
+    include 'header2.php';
+    include 'layanan/po.php';
+  } elseif ($_GET['halaman'] == "hub-kami") {
+    include 'header2.php';
+    include 'tentang/hub-kami.php';
+  } elseif ($_GET['halaman'] == "profile") {
+    include 'header2.php';
+    include 'tentang/profil-klinik.php';
   }
 } else {
   include 'header.php';

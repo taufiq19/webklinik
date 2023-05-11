@@ -87,18 +87,19 @@
             <div class="row justify-content-center text-center">
                 <div class="col-lg-12 col-md-12 col-12">
                     <?php
+                    $no = 1;
                     $ambil_data = $host->query("SELECT DISTINCT unit FROM fasilitas order by id_fasilitas DESC;"); ?>
                     <?php while ($data = $ambil_data->fetch_assoc()) {
                         $unit = $data['unit'];
                     ?>
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item bd-acd-fasilitas rounded-0">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo str_replace(' ', '', $data['unit']); ?>" aria-expanded="true" aria-controls="collapseOne">
-                                        <?php echo $data['unit'] ?>
+                                <h2 class="accordion-header" id="heading<?php echo $no?>">
+                                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#fas-<?php echo $no?>" aria-expanded="true" aria-controls="fas-<?php echo $no?>">
+                                        <?php echo $unit ?>
                                     </button>
                                 </h2>
-                                <div id="<?php echo str_replace(' ', '', $data['unit']); ?>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="fas-<?php echo $no?>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <div class="row justify-content-center text-center">
                                             <?php
@@ -116,7 +117,9 @@
                                 </div>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php
+                        $no++;
+                    } ?>
                 </div>
             </div>
         </div>
