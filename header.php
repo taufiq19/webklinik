@@ -4,18 +4,19 @@ include('admin/koneksi/konek.php');
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="image/LOGO ST KHADIJAH.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../image/LOGO ST KHADIJAH.png" />
     <title>Klinik Utama Sitti Khadijah</title>
     <!-- Link Aos -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
     <!-- Link Bootstrap -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
     <!-- Link Css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/Css_Saya/stye.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/Css_Saya/stye.css" />
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,8 +32,8 @@ include('admin/koneksi/konek.php');
         <div class="container">
             <div class="collapse navbar-collapse justify-content-between">
                 <img class="img-logo-klinik" src="image/LOGO ST KHADIJAH.png" style="opacity: 0;" alt="Logo Klinik" data-tilt>
-                <form class="d-flex" role="search">
-                    <input class="form-control form-control-search bg-light shadow-sm" type="search" name="cari" id="cari" placeholder="Masukkan Kata Kunci" aria-label="Search">
+                <form class="d-flex" action="index.php" method="get" role="search">
+                    <input class="form-control form-control-search bg-light shadow-sm" type="search" name="sappa" id="sappa" placeholder="Masukkan Kata Kunci" aria-label="Search">
                 </form>
                 <ul class="navbar-nav">
                     <li class="nav-item">

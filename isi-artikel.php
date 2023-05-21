@@ -52,11 +52,10 @@ $d = mysqli_fetch_assoc($data);
                 <?php while ($data2 = $ambil_data2->fetch_assoc()) {
 
                 ?>
-
                     <div class="card-artikel p-2" data-aos="fade-left">
                         <img src="gambar-artikel/<?php echo $data2['gambar'];  ?>" class="crd-img-artikel mb-3" alt="">
-                        <a class="judul-artikel text-decoration-none" href="">
-                            <h3 class="fw-bold text-capitalize mb-1 text-start">judul artikel</h3>
+                        <a class="judul-artikel text-decoration-none" href="index.php?halaman=isiartikel&id=<?php echo $data2['id_berita'] ?>">
+                            <h3 class="fw-bold text-capitalize mb-1 text-start"><?php echo $data2['judul_artikel'] ?></h3>
                         </a>
                         <p class="lh-base mb-2">
                             <?php

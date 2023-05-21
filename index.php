@@ -51,6 +51,9 @@ if (isset($_GET['halaman'])) {
     include 'header2.php';
     include 'tentang/profil-klinik.php';
   }
+} elseif (isset($_GET['sappa'])) {
+  include 'header.php';
+  include 'cari.php';
 } else {
   include 'header.php';
   include 'home.php';
